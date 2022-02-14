@@ -22,7 +22,7 @@
 						<p><a target="_blank" href="https://github.com/kazuyamarino/nsy-docs/blob/master/README.md#user-guide-"><strong>NSY User Guide</strong></a><br />The guide before starting to use NSY.</p>
 					</div>
 					<div class="large-4 medium-4 cell">
-						<p><a target="_blank" href="https://github.com/kazuyamarino/nsy-docs/blob/master/README.md#system-guide-"><strong>NSY Sistem Guide</strong></a><br />The guide system.</p>
+						<p><a target="_blank" href="https://github.com/kazuyamarino/nsy-docs/blob/master/README.md#system-guide-"><strong>NSY System Guide</strong></a><br />The guide system.</p>
 					</div>
 				</div>
 

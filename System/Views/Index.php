@@ -13,7 +13,7 @@
 		                <p><a target="_blank" href="https://github.com/kazuyamarino/shyffon#lets-start"><strong>How to dating with Shyffon?</strong></a><br />Setup installation.</p>
 		            </div>
 					<div class="large-4 medium-4 cell">
-						<p><a target="_blank" href="https://github.com/kazuyamarino/shyffon#shyffon-homepage--crud-example"><strong>Shyffon CRUD Example</strong></a><br />The CRUD example build by Shyffon.</p>
+						<p><a target="_blank" href="@( base_url('crud') )"><strong>Shyffon CRUD Example</strong></a><br />The CRUD example build by Shyffon.</p>
 					</div>
 					<div class="large-4 medium-4 cell">
 						<p><a target="_blank" href="https://github.com/kazuyamarino/nsy-docs/blob/master/README.md#nsy-features-"><strong>NSY Features</strong></a><br />Features available in NSY.</p>

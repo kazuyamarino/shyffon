@@ -1,0 +1,11 @@
+autoindex off;
+
+error_page 404 /shyffon/public/404.html;
+error_page 403 /shyffon/public/403.html;
+error_page 500 502 503 504 /shyffon/public/50x.html;
+
+location /shyffon/ {
+	# sFirst attempt to serve request as file, then
+	# as directory, then fall back to displaying a 404.
+	try_files $uri /shyffon/public/index.php?/$uri;
+}

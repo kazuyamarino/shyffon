@@ -1,0 +1,46 @@
+{
+    "name": "vikry/nsy",
+    "description": "NSY is a simple PHP Framework that works well on MVC or HMVC mode",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Vikry Yuansah",
+            "email": "admin@nsyframework.com"
+        }
+    ],
+	"require": {
+        "nesbot/carbon": "^2.53.1",
+        "vlucas/phpdotenv": "^5.4",
+		"nicolab/php-ftp-client": "^1.6.0",
+        "optimus/onion": "~1.0",
+        "fakerphp/faker": "^1.16",
+        "php-curl-class/php-curl-class": "^9.5",
+        "tgalopin/html-sanitizer": "^1.4",
+        "voku/anti-xss": "^4.1",
+        "lablnet/encryption": "^1.0"
+    },
+    "autoload": {
+        "psr-4": {
+			"System\\": "System/"
+        },
+		"files": [
+			"System/Helpers/CodeIgniter_Helpers.php"
+		]
+    },
+    "config": {
+        "vendor-dir": "System/Vendor/"
+    },
+	"scripts": {
+	    "post-install-cmd": [
+			"composer dump-autoload -o",
+	        "@nsy_cli_install"
+	    ],
+	    "nsy_cli_install": [
+			"bash INSTALL.sh"
+	    ]
+	},
+    "require-dev": {
+        "phpunit/phpunit": "^9"
+    }
+}

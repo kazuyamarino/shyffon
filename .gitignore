@@ -1,0 +1,11 @@
+# Include your project-specific ignores in this file
+# Read about how to use .gitignore: https://help.github.com/articles/ignoring-files
+
+/env
+/.htaccess
+# /.travis.yml
+/phpunit.xml
+public/.htaccess
+System/Controllers/Controller_Test.php
+System/Models/Model_Test.php
+System/Views/View_Test.php

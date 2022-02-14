@@ -1,0 +1,14 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# TEAM
+
+	Vikry -- Founder -- uybeye
+
+# THANKS
+
+	Mom, Dad, Wife, and Daughter
+
+# TECHNOLOGY COLOPHON
+
+    PHP, CSS3, HTML5, JQuery, Composer, Bash Script

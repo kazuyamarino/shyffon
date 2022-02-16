@@ -1,12 +1,8 @@
 <div class="content">
 	<hr>
-	<div class="grid-x grid-padding-x">
-		<div class="large-5 medium-5 cell">
-			<a class="back-btn" href="@( base_url('crud') )"><i class="fas fa-arrow-left"></i>&nbsp;Back</a>
-		</div>
-	</div>
 	<div class="grid-x grid-padding-x align-center">
 		<div class="large-5 medium-5 cell">
+			<h5 class="text-center"><a href="@( base_url('crud') )">Back</a></h5>
 			<h5>Users Information</h5>
 			<form action="@( base_url('crud/update/'. $data['id']. '') )" method="POST" data-abide novalidate class="grid-x grid-padding-x">
 				<div class="large-12 cell">

@@ -6,7 +6,7 @@ php:
   - 8.0
 
 before_script:
-  - mkdir nsy
+  - mkdir shyffon
   - composer update
   - composer install --prefer-source --no-interaction
 
@@ -15,5 +15,5 @@ script:
 
 env:
   - APP_ENV=development
-  - APP_DIR=nsy
+  - APP_DIR=shyffon
   - DB_CONNECTION=mysql

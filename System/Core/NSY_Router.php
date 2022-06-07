@@ -48,7 +48,7 @@ class NSY_Router {
             $callback = $params[2];
         } else {
             $maps = null;
-            $uri = strpos($params[0], '/') === 0 ? $params[0] : '/' . $params[0];
+            $uri = strpos($params[0] ?? '', '/') === 0 ? $params[0] : '/' . $params[0];
             $callback = $params[1];
         }
 
@@ -88,7 +88,7 @@ class NSY_Router {
 	 * @param  array  $vars
 	 * @return void
 	 */
-	public static function goto($controllerWithMethod = null, $vars = array())
+	public static function goto($controllerWithMethod = '', $vars = array())
     {
 		$params = explode('@', $controllerWithMethod);
 
@@ -115,7 +115,7 @@ class NSY_Router {
 	 * @param  array  $vars
 	 * @return void
 	 */
-	public function for($controllerWithMethod = null, $vars = array())
+	public function for($controllerWithMethod = '', $vars = array())
     {
 		$params = explode('@', $controllerWithMethod);
 

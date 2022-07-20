@@ -3,7 +3,7 @@ namespace System\Modules\Crud\Models;
 
 use System\Core\DB;
 
-class ModelCrud
+class ModelCrud extends DB
 {
 
 	public function get_data()

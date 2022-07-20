@@ -3,7 +3,7 @@ namespace System\Modules\Homepage\Models;
 
 use System\Core\DB;
 
-class ModelHello
+class ModelHello extends DB
 {
 
 	public function mvc_page()

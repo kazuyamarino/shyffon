@@ -17,7 +17,7 @@ class NSY_Migration
 	* Default Connection
 	*
 	* @param string $conn_name
-	* @return void
+	* @return mixed
 	*/
 	public static function connect($conn_name = 'primary')
 	{
@@ -25,19 +25,15 @@ class NSY_Migration
 			case 'mysql':
 			self::$connection = NSY_DB::connect_mysql($conn_name);
 			return new self;
-			break;
 			case 'dblib':
 			self::$connection = NSY_DB::connect_dblib($conn_name);
 			return new self;
-			break;
 			case 'sqlsrv':
 			self::$connection = NSY_DB::connect_sqlsrv($conn_name);
 			return new self;
-			break;
 			case 'pgsql':
 			self::$connection = NSY_DB::connect_pgsql($conn_name);
 			return new self;
-			break;
 			default:
 			$var_msg = "Default database connection not found or undefined, please configure it in <strong>.env</strong> file <strong><i>DB_CONNECTION</i></strong>";
 			NSY_Desk::static_error_handler($var_msg);
@@ -74,14 +70,11 @@ class NSY_Migration
 
 						$var_msg = "Syntax error or access violation! \nYou have an error in your SQL syntax, \nPlease check your query again!";
 						NSY_Desk::static_error_handler($var_msg);
-						exit();
 					} elseif(config_app('transaction') === 'off') {
 						$var_msg = "Syntax error or access violation! \nYou have an error in your SQL syntax, \nPlease check your query again!";
 						NSY_Desk::static_error_handler($var_msg);
-						exit();
 					} else {
 						echo '<pre>The Transaction Mode is not set correctly. Please check in the <strong><i>System/Config/App.php</i></strong></pre>';
-						exit();
 					}
 				}
 			}
@@ -95,6 +88,7 @@ class NSY_Migration
 		// Close the statement & connection
 		$stmt = null;
 		self::$connection = null;
+		exit();
 	}
 
 	/**
@@ -126,14 +120,11 @@ class NSY_Migration
 
 						$var_msg = "Syntax error or access violation! \nYou have an error in your SQL syntax, \nPlease check your query again!";
 						NSY_Desk::static_error_handler($var_msg);
-						exit();
 					} elseif(config_app('transaction') === 'off') {
 						$var_msg = "Syntax error or access violation! \nYou have an error in your SQL syntax, \nPlease check your query again!";
 						NSY_Desk::static_error_handler($var_msg);
-						exit();
 					} else {
 						echo '<pre>The Transaction Mode is not set correctly. Please check in the <strong><i>System/Config/App.php</i></strong></pre>';
-						exit();
 					}
 				}
 			}
@@ -147,6 +138,7 @@ class NSY_Migration
 		// Close the statement & connection
 		$stmt = null;
 		self::$connection = null;
+		exit();
 	}
 
 	/**
@@ -179,14 +171,11 @@ class NSY_Migration
 
 						$var_msg = "Syntax error or access violation! \nYou have an error in your SQL syntax, \nPlease check your query again!";
 						NSY_Desk::static_error_handler($var_msg);
-						exit();
 					} elseif(config_app('transaction') === 'off') {
 						$var_msg = "Syntax error or access violation! \nYou have an error in your SQL syntax, \nPlease check your query again!";
 						NSY_Desk::static_error_handler($var_msg);
-						exit();
 					} else {
 						echo '<pre>The Transaction Mode is not set correctly. Please check in the <strong><i>System/Config/App.php</i></strong></pre>';
-						exit();
 					}
 				}
 			}
@@ -200,6 +189,7 @@ class NSY_Migration
 		// Close the statement & connection
 		$stmt = null;
 		self::$connection = null;
+		exit();
 	}
 
 	/**
@@ -232,14 +222,11 @@ class NSY_Migration
 
 						$var_msg = "Syntax error or access violation! \nYou have an error in your SQL syntax, \nPlease check your query again!";
 						NSY_Desk::static_error_handler($var_msg);
-						exit();
 					} elseif(config_app('transaction') === 'off') {
 						$var_msg = "Syntax error or access violation! \nYou have an error in your SQL syntax, \nPlease check your query again!";
 						NSY_Desk::static_error_handler($var_msg);
-						exit();
 					} else {
 						echo '<pre>The Transaction Mode is not set correctly. Please check in the <strong><i>System/Config/App.php</i></strong></pre>';
-						exit();
 					}
 				}
 			}
@@ -253,6 +240,7 @@ class NSY_Migration
 		// Close the statement & connection
 		$stmt = null;
 		self::$connection = null;
+		exit();
 	}
 
 	/**
@@ -285,14 +273,11 @@ class NSY_Migration
 
 						$var_msg = "Syntax error or access violation! \nYou have an error in your SQL syntax, \nPlease check your query again!";
 						NSY_Desk::static_error_handler($var_msg);
-						exit();
 					} elseif(config_app('transaction') === 'off') {
 						$var_msg = "Syntax error or access violation! \nYou have an error in your SQL syntax, \nPlease check your query again!";
 						NSY_Desk::static_error_handler($var_msg);
-						exit();
 					} else {
 						echo '<pre>The Transaction Mode is not set correctly. Please check in the <strong><i>System/Config/App.php</i></strong></pre>';
-						exit();
 					}
 				}
 			}
@@ -306,6 +291,7 @@ class NSY_Migration
 		// Close the statement & connection
 		$stmt = null;
 		self::$connection = null;
+		exit();
 	}
 
 	/**
@@ -337,14 +323,11 @@ class NSY_Migration
 
 						$var_msg = "Syntax error or access violation! \nYou have an error in your SQL syntax, \nPlease check your query again!";
 						NSY_Desk::static_error_handler($var_msg);
-						exit();
 					} elseif(config_app('transaction') === 'off') {
 						$var_msg = "Syntax error or access violation! \nYou have an error in your SQL syntax, \nPlease check your query again!";
 						NSY_Desk::static_error_handler($var_msg);
-						exit();
 					} else {
 						echo '<pre>The Transaction Mode is not set correctly. Please check in the <strong><i>System/Config/App.php</i></strong></pre>';
-						exit();
 					}
 				}
 			}
@@ -358,6 +341,7 @@ class NSY_Migration
 		// Close the statement & connection
 		$stmt = null;
 		self::$connection = null;
+		exit();
 	}
 
 	/**
@@ -389,14 +373,11 @@ class NSY_Migration
 
 						$var_msg = "Syntax error or access violation! \nYou have an error in your SQL syntax, \nPlease check your query again!";
 						NSY_Desk::static_error_handler($var_msg);
-						exit();
 					} elseif(config_app('transaction') === 'off') {
 						$var_msg = "Syntax error or access violation! \nYou have an error in your SQL syntax, \nPlease check your query again!";
 						NSY_Desk::static_error_handler($var_msg);
-						exit();
 					} else {
 						echo '<pre>The Transaction Mode is not set correctly. Please check in the <strong><i>System/Config/App.php</i></strong></pre>';
-						exit();
 					}
 				}
 			}
@@ -410,6 +391,7 @@ class NSY_Migration
 		// Close the statement & connection
 		$stmt = null;
 		self::$connection = null;
+		exit();
 	}
 
 	/**
@@ -502,7 +484,7 @@ class NSY_Migration
 	* Function for create table
 	*
 	* @param string  $table
-	* @param Closure $closure
+	* @param \Closure $closure
 	*/
 	public function create_table(string $table = null, \Closure $closure)
 	{
@@ -538,14 +520,11 @@ class NSY_Migration
 
 						$var_msg = "Syntax error or access violation! \nYou have an error in your SQL syntax, \nPlease check your query again!";
 						NSY_Desk::static_error_handler($var_msg);
-						exit();
 					} elseif(config_app('transaction') === 'off') {
 						$var_msg = "Syntax error or access violation! \nYou have an error in your SQL syntax, \nPlease check your query again!";
 						NSY_Desk::static_error_handler($var_msg);
-						exit();
 					} else {
 						echo '<pre>The Transaction Mode is not set correctly. Please check in the <strong><i>System/Config/App.php</i></strong></pre>';
-						exit();
 					}
 				}
 			}
@@ -559,13 +538,14 @@ class NSY_Migration
 		// Close the statement & connection
 		$stmt = null;
 		self::$connection = null;
+		exit();
 	}
 
 	/**
 	* Function for add column (mssql)
 	*
 	* @param string  $table
-	* @param Closure $closure
+	* @param \Closure $closure
 	*/
 	public function add(string $table = null, \Closure $closure)
 	{
@@ -597,14 +577,11 @@ class NSY_Migration
 
 						$var_msg = "Syntax error or access violation! \nYou have an error in your SQL syntax, \nPlease check your query again!";
 						NSY_Desk::static_error_handler($var_msg);
-						exit();
 					} elseif(config_app('transaction') === 'off') {
 						$var_msg = "Syntax error or access violation! \nYou have an error in your SQL syntax, \nPlease check your query again!";
 						NSY_Desk::static_error_handler($var_msg);
-						exit();
 					} else {
 						echo '<pre>The Transaction Mode is not set correctly. Please check in the <strong><i>System/Config/App.php</i></strong></pre>';
-						exit();
 					}
 				}
 			}
@@ -618,13 +595,14 @@ class NSY_Migration
 		// Close the statement & connection
 		$stmt = null;
 		self::$connection = null;
+		exit();
 	}
 
 	/**
 	* Function for add column (mysql/mariadb/postgre)
 	*
 	* @param string  $table
-	* @param Closure $closure
+	* @param \Closure $closure
 	*/
 	public function add_cols(string $table = null, \Closure $closure)
 	{
@@ -656,14 +634,11 @@ class NSY_Migration
 
 						$var_msg = "Syntax error or access violation! \nYou have an error in your SQL syntax, \nPlease check your query again!";
 						NSY_Desk::static_error_handler($var_msg);
-						exit();
 					} elseif(config_app('transaction') === 'off') {
 						$var_msg = "Syntax error or access violation! \nYou have an error in your SQL syntax, \nPlease check your query again!";
 						NSY_Desk::static_error_handler($var_msg);
-						exit();
 					} else {
 						echo '<pre>The Transaction Mode is not set correctly. Please check in the <strong><i>System/Config/App.php</i></strong></pre>';
-						exit();
 					}
 				}
 			}
@@ -677,13 +652,14 @@ class NSY_Migration
 		// Close the statement & connection
 		$stmt = null;
 		self::$connection = null;
+		exit();
 	}
 
 	/**
 	* Function for drop column (mysql/mariadb/postgre/mssql)
 	*
 	* @param string  $table
-	* @param Closure $closure
+	* @param \Closure $closure
 	*/
 	public function drop_cols(string $table = null, \Closure $closure)
 	{
@@ -715,14 +691,11 @@ class NSY_Migration
 
 						$var_msg = "Syntax error or access violation! \nYou have an error in your SQL syntax, \nPlease check your query again!";
 						NSY_Desk::static_error_handler($var_msg);
-						exit();
 					} elseif(config_app('transaction') === 'off') {
 						$var_msg = "Syntax error or access violation! \nYou have an error in your SQL syntax, \nPlease check your query again!";
 						NSY_Desk::static_error_handler($var_msg);
-						exit();
 					} else {
 						echo '<pre>The Transaction Mode is not set correctly. Please check in the <strong><i>System/Config/App.php</i></strong></pre>';
-						exit();
 					}
 				}
 			}
@@ -736,13 +709,14 @@ class NSY_Migration
 		// Close the statement & connection
 		$stmt = null;
 		self::$connection = null;
+		exit();
 	}
 
 	/**
 	* Function for alter column (mssql/postgre)
 	*
 	* @param string  $table
-	* @param Closure $closure
+	* @param \Closure $closure
 	*/
 	public function alter_cols(string $table = null, \Closure $closure)
 	{
@@ -778,14 +752,11 @@ class NSY_Migration
 
 						$var_msg = "Syntax error or access violation! \nYou have an error in your SQL syntax, \nPlease check your query again!";
 						NSY_Desk::static_error_handler($var_msg);
-						exit();
 					} elseif(config_app('transaction') === 'off') {
 						$var_msg = "Syntax error or access violation! \nYou have an error in your SQL syntax, \nPlease check your query again!";
 						NSY_Desk::static_error_handler($var_msg);
-						exit();
 					} else {
 						echo '<pre>The Transaction Mode is not set correctly. Please check in the <strong><i>System/Config/App.php</i></strong></pre>';
-						exit();
 					}
 				}
 			}
@@ -799,13 +770,14 @@ class NSY_Migration
 		// Close the statement & connection
 		$stmt = null;
 		self::$connection = null;
+		exit();
 	}
 
 	/**
 	* Function for modify column (mysql/mariadb)
 	*
 	* @param string  $table
-	* @param Closure $closure
+	* @param \Closure $closure
 	*/
 	public function modify_cols(string $table = null, \Closure $closure)
 	{
@@ -841,14 +813,11 @@ class NSY_Migration
 
 						$var_msg = "Syntax error or access violation! \nYou have an error in your SQL syntax, \nPlease check your query again!";
 						NSY_Desk::static_error_handler($var_msg);
-						exit();
 					} elseif(config_app('transaction') === 'off') {
 						$var_msg = "Syntax error or access violation! \nYou have an error in your SQL syntax, \nPlease check your query again!";
 						NSY_Desk::static_error_handler($var_msg);
-						exit();
 					} else {
 						echo '<pre>The Transaction Mode is not set correctly. Please check in the <strong><i>System/Config/App.php</i></strong></pre>';
-						exit();
 					}
 				}
 			}
@@ -862,13 +831,14 @@ class NSY_Migration
 		// Close the statement & connection
 		$stmt = null;
 		self::$connection = null;
+		exit();
 	}
 
 	/**
 	* Function for rename column (postgre)
 	*
 	* @param string  $table
-	* @param Closure $closure
+	* @param \Closure $closure
 	*/
 	public function rename_cols(string $table = null, \Closure $closure)
 	{
@@ -900,14 +870,11 @@ class NSY_Migration
 
 						$var_msg = "Syntax error or access violation! \nYou have an error in your SQL syntax, \nPlease check your query again!";
 						NSY_Desk::static_error_handler($var_msg);
-						exit();
 					} elseif(config_app('transaction') === 'off') {
 						$var_msg = "Syntax error or access violation! \nYou have an error in your SQL syntax, \nPlease check your query again!";
 						NSY_Desk::static_error_handler($var_msg);
-						exit();
 					} else {
 						echo '<pre>The Transaction Mode is not set correctly. Please check in the <strong><i>System/Config/App.php</i></strong></pre>';
-						exit();
 					}
 				}
 			}
@@ -921,13 +888,14 @@ class NSY_Migration
 		// Close the statement & connection
 		$stmt = null;
 		self::$connection = null;
+		exit();
 	}
 
 	/**
 	* Function for change column (mysql/mariadb)
 	*
 	* @param string  $table
-	* @param Closure $closure
+	* @param \Closure $closure
 	*/
 	public function change_cols(string $table = null, \Closure $closure)
 	{
@@ -959,14 +927,11 @@ class NSY_Migration
 
 						$var_msg = "Syntax error or access violation! \nYou have an error in your SQL syntax, \nPlease check your query again!";
 						NSY_Desk::static_error_handler($var_msg);
-						exit();
 					} elseif(config_app('transaction') === 'off') {
 						$var_msg = "Syntax error or access violation! \nYou have an error in your SQL syntax, \nPlease check your query again!";
 						NSY_Desk::static_error_handler($var_msg);
-						exit();
 					} else {
 						echo '<pre>The Transaction Mode is not set correctly. Please check in the <strong><i>System/Config/App.php</i></strong></pre>';
-						exit();
 					}
 				}
 			}
@@ -980,13 +945,14 @@ class NSY_Migration
 		// Close the statement & connection
 		$stmt = null;
 		self::$connection = null;
+		exit();
 	}
 
 	/**
 	* Function for sp rename column (mssql)
 	*
 	* @param string  $table
-	* @param Closure $closure
+	* @param \Closure $closure
 	*/
 	public function sp_rename_cols(string $table = null, \Closure $closure)
 	{
@@ -1018,14 +984,11 @@ class NSY_Migration
 
 						$var_msg = "Syntax error or access violation! \nYou have an error in your SQL syntax, \nPlease check your query again!";
 						NSY_Desk::static_error_handler($var_msg);
-						exit();
 					} elseif(config_app('transaction') === 'off') {
 						$var_msg = "Syntax error or access violation! \nYou have an error in your SQL syntax, \nPlease check your query again!";
 						NSY_Desk::static_error_handler($var_msg);
-						exit();
 					} else {
 						echo '<pre>The Transaction Mode is not set correctly. Please check in the <strong><i>System/Config/App.php</i></strong></pre>';
-						exit();
 					}
 				}
 			}
@@ -1039,6 +1002,7 @@ class NSY_Migration
 		// Close the statement & connection
 		$stmt = null;
 		self::$connection = null;
+		exit();
 	}
 
 }

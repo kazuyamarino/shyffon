@@ -19,7 +19,8 @@
         "lablnet/encryption": "^1.0",
         "josantonius/cookie": "^2.0",
         "josantonius/json": "^2.0",
-        "josantonius/session": "^2.0"
+        "josantonius/session": "^2.0",
+        "symfony/html-sanitizer": "^6.1"
     },
     "autoload": {
         "psr-4": {

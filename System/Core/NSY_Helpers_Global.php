@@ -208,8 +208,8 @@ if (! function_exists('redirect_back')) {
 
 /**
 * Get config value from System/Config/App.php
-* @param  string|int $d1
-* @return string
+* @param  mixed $d1
+* @return mixed
 */
 function config_app($d1 = '')
 {
@@ -251,7 +251,7 @@ function config_db($d1 = '',$d2 = '')
 /**
 * Get config value from System/Config/Site.php
 * @param  string|int $d1
-* @return array
+* @return mixed
 */
 function config_site($d1 = '')
 {
@@ -944,4 +944,24 @@ function deposer($param = '')
 	}
 
 	return $result;
+}
+
+/**
+ * Data Conversion Helpers
+ */
+if (! function_exists('json_fetch')) {
+	/**
+	* Fetch data to json format
+	* @param  array $data
+	* @param  int $status
+	* @return string
+	*/
+	function json_fetch($data = array(), $status = 0)
+	{
+		$json_data = $data;
+		$json_result = json_encode($json_data);
+
+		http_response_code($status);
+		return $json_result;
+	}
 }

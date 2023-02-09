@@ -24,34 +24,35 @@ Route::get('/', function() {
 });
 
 // HMVC Route
-Route::get('/hmvc', function() {
-	Route::goto('Homepage\Hello@index_hmvc');
-});
+Route::get('/hmvc', 'Homepage\Hello@index_hmvc');
 
 // Crud Route
 Route::group('/crud', function() {
-	Route::get('', function() {
-		Route::goto('Crud\Crud@crud_homepage');
-	});
+	// Crud Homepage
+	Route::get('', 'Crud\Crud@crud_homepage');
 	Route::get('/(:any)', function($message) {
 		Route::goto('Crud\Crud@crud_homepage', $message);
 	});
-	Route::post('/insert', function() {
-		Route::goto('Crud\Crud@crud_insert');
-	});
+
+	// Insert data process
+	Route::post('/insert', 'Crud\Crud@crud_insert');
+
+	// Delete data process
 	Route::get('/delete/(:num)', function($id) {
 		Route::goto('Crud\Crud@crud_delete', $id);
 	});
-	Route::post('/multidelete', function() {
-		Route::goto('Crud\Crud@crud_multidelete');
-	});
+	Route::post('/multidelete', 'Crud\Crud@crud_multidelete');
+
+	// Update data process
 	Route::post('/update/(:num)', function($id) {
 		Route::goto('Crud\Crud@crud_update', $id);
 	});
+
+	// fetch data for update
 	Route::get('/fetch/(:num)', function($id) {
 		Route::goto('Crud\Crud@crud_fetch', $id);
 	});
-	Route::get('/data.json', function() {
-		Route::goto('Crud\Crud@crud_data');
-	});
+
+	// Show all data on json format
+	Route::get('/data.json', 'Crud\Crud@crud_data');
 });

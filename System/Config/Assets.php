@@ -17,7 +17,7 @@ function header_assets()
 	Add::custom('<title>' . get_title() . ' ' . get_version() . ' | ' . get_codename() . '</title>');
 
 	// Meta Tag
-	Add::meta('charset="utf-8"', null);
+	Add::meta('charset="utf-8"');
 	Add::meta('http-equiv="x-ua-compatible"', 'ie=edge');
 	Add::meta('name="description"', get_desc());
 	Add::meta('name="keywords"', get_keywords());
@@ -25,7 +25,7 @@ function header_assets()
 	Add::meta('name="viewport"', 'width=device-width, initial-scale=1, shrink-to-fit=no');
 
 	// Favicon
-	Add::link('favicon.png', 'shortcut icon', null);
+	Add::link('favicon.png', 'shortcut icon');
 
 	// Main Style
 	Add::link('main.css', 'stylesheet', 'text/css');
@@ -42,48 +42,48 @@ function header_assets()
 	Add::link('../../node_modules/@fortawesome/fontawesome-free/css/all.min.css', 'stylesheet', 'text/css');
 
 	// Modernizr JS
-	Add::script('modernizr.min.js', 'text/javascript', 'UTF-8', null);
+	Add::script('modernizr.min.js', 'text/javascript', 'UTF-8');
 }
 
 function footer_assets()
 {
 	// JQuery JS
-	Add::script('../../node_modules/jquery/dist/jquery.min.js', 'text/javascript', 'UTF-8', null);
-	Add::script('../../node_modules/jquery-migrate/dist/jquery-migrate.min.js', 'text/javascript', 'UTF-8', null);
+	Add::script('../../node_modules/jquery/dist/jquery.min.js', 'text/javascript', 'UTF-8');
+	Add::script('../../node_modules/jquery-migrate/dist/jquery-migrate.min.js', 'text/javascript', 'UTF-8');
 
 	// Foundation JS
-	Add::script('../../node_modules/foundation-sites/dist/js/foundation.min.js', 'text/javascript', 'UTF-8', null);
-	Add::script('../../node_modules/what-input/dist/what-input.min.js', 'text/javascript', 'UTF-8', null);
-	Add::script('../../node_modules/foundation-datepicker/js/foundation-datepicker.min.js', 'text/javascript', 'UTF-8', null);
+	Add::script('../../node_modules/foundation-sites/dist/js/foundation.min.js', 'text/javascript', 'UTF-8');
+	Add::script('../../node_modules/what-input/dist/what-input.min.js', 'text/javascript', 'UTF-8');
+	Add::script('../../node_modules/foundation-datepicker/js/foundation-datepicker.min.js', 'text/javascript', 'UTF-8');
 
 	// Datatables JS
-	Add::script('../../node_modules/datatables.net/js/jquery.dataTables.min.js', 'text/javascript', 'UTF-8', null);
-	Add::script('../../node_modules/datatables.net-zf/js/dataTables.foundation.min.js', 'text/javascript', 'UTF-8', null);
-	Add::script('responsive-tables.min.js', 'text/javascript', 'UTF-8', null);
+	Add::script('../../node_modules/datatables.net/js/jquery.dataTables.min.js', 'text/javascript', 'UTF-8');
+	Add::script('../../node_modules/datatables.net-zf/js/dataTables.foundation.min.js', 'text/javascript', 'UTF-8');
+	Add::script('responsive-tables.min.js', 'text/javascript', 'UTF-8');
 
 	// Google Analytics: change UA-XXXXX-Y to be your site's ID.
 	Add::custom("<script>window.ga=function(){ga.q.push(arguments)}; ga.q=[]; ga.l=+new Date;ga('create','UA-XXXXX-Y','auto'); ga('send','pageview')</script>");
-	Add::script('https://www.google-analytics.com/analytics.js', 'text/javascript', null, 'async defer');
+	Add::script('https://www.google-analytics.com/analytics.js', 'text/javascript', 'async defer');
 
 	// System JS
-	Add::script('config/system.js', 'text/javascript', 'UTF-8', null);
+	Add::script('config/system.js', 'text/javascript', 'UTF-8');
 
 	// Base JS
-	Add::script('main.js', 'text/javascript', 'UTF-8', null);
+	Add::script('main.js', 'text/javascript', 'UTF-8');
 }
 
 function sweetalert_init()
 {
-	Add::script('../../node_modules/sweetalert2/dist/sweetalert2.all.min.js', 'text/javascript', 'UTF-8', null);
-	Add::script('../../node_modules/promise-polyfill/dist/polyfill.min.js', 'text/javascript', 'UTF-8', null);
+	Add::script('../../node_modules/sweetalert2/dist/sweetalert2.all.min.js', 'text/javascript', 'UTF-8');
+	Add::script('../../node_modules/promise-polyfill/dist/polyfill.min.js', 'text/javascript', 'UTF-8');
 }
 
 function datatables_init()
 {
-	Add::script('datatables/init.js', 'text/javascript', 'UTF-8', null);
+	Add::script('datatables/init.js', 'text/javascript', 'UTF-8');
 }
 
 function datatables_crud_init()
 {
-	Add::script('datatables/init_crud.js', 'text/javascript', 'UTF-8', null);
+	Add::script('datatables/init_crud.js', 'text/javascript', 'UTF-8');
 }

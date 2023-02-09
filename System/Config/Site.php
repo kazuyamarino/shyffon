@@ -12,7 +12,7 @@ return [
 	| This value is for <title> tag.
 	|
 	*/
-	'sitetitle' => 'NSY PHP Framework',
+	'sitetitle' => '(Shyffon) Foundation & NSY PHP Framework',
 
 	/*
 	|--------------------------------------------------------------------------
@@ -42,7 +42,7 @@ return [
 	| This value is for <meta> description tag.
 	|
 	*/
-	'sitedesc' => 'NSY is a simple PHP Framework that works well on MVC or HMVC mode.',
+	'sitedesc' => 'Shyffon is a sweet cake of PHP Framework.',
 
 	/*
 	|--------------------------------------------------------------------------
@@ -62,7 +62,7 @@ return [
 	| Define version of the application
 	|
 	*/
-	'version' => 'v4.1.1',
+	'version' => 'v4.2.0',
 
 	/*
 	|--------------------------------------------------------------------------

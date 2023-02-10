@@ -11,7 +11,7 @@
     "jquery": "^3.6.0",
     "jquery-migrate": "^3.3.2",
     "promise-polyfill": "^8.2.0",
-    "sweetalert2": "^10.15.6",
+    "sweetalert2": "10.16.9",
     "what-input": "^5.2.10"
   },
   "scripts": {

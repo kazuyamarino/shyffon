@@ -36,8 +36,3 @@ function base_url(url)
 		}
 	}
 }
-
-/*
-Foundation initialize
- */
-$(document).foundation();

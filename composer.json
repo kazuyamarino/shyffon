@@ -20,7 +20,8 @@
         "josantonius/cookie": "^2.0",
         "josantonius/json": "^2.0",
         "josantonius/session": "^2.0",
-        "symfony/html-sanitizer": "^6.1"
+        "symfony/html-sanitizer": "^6.1",
+        "nilportugues/sql-query-builder": "^1.8"
     },
     "autoload": {
         "psr-4": {

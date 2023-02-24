@@ -239,11 +239,14 @@ return [
 		'System\Vendor\Carbon' => Carbon\Carbon::class,
 		'System\Vendor\Ftp' => FtpClient\FtpClient::class,
 		'System\Vendor\Almana' => Lablnet\Encryption::class,
-		'System\Libraries\Cookie' => Josantonius\Cookie\Cookie::class,
-		'System\Libraries\Facades\Cookie' => Josantonius\Cookie\Facades\Cookie::class,
-		'System\Libraries\Json' => Josantonius\Json\Json::class,
-		'System\Libraries\Session' => Josantonius\Session\Session::class,
-		'System\Libraries\Facades\Session' => Josantonius\Session\Facades\Session::class
+		'System\Vendor\Cookie' => Josantonius\Cookie\Cookie::class,
+		'System\Vendor\Facades\Cookie' => Josantonius\Cookie\Facades\Cookie::class,
+		'System\Vendor\Json' => Josantonius\Json\Json::class,
+		'System\Vendor\Session' => Josantonius\Session\Session::class,
+		'System\Vendor\Facades\Session' => Josantonius\Session\Facades\Session::class,
+		'System\Vendor\QueryBuilder\GenericBuilder' => NilPortugues\Sql\QueryBuilder\Builder\GenericBuilder::class,
+		'System\Vendor\QueryBuilder\OrderBy' => NilPortugues\Sql\QueryBuilder\Syntax\OrderBy::class,
+		'System\Vendor\QueryBuilder\MySqlBuilder' => NilPortugues\Sql\QueryBuilder\Builder\MySqlBuilder::class
 	]
 
 ];

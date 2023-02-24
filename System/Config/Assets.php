@@ -60,10 +60,8 @@ function footer_assets()
 	Add::script('../../node_modules/datatables.net/js/jquery.dataTables.min.js', 'text/javascript', 'UTF-8');
 	Add::script('../../node_modules/datatables.net-zf/js/dataTables.foundation.min.js', 'text/javascript', 'UTF-8');
 	Add::script('responsive-tables.min.js', 'text/javascript', 'UTF-8');
-
-	// Google Analytics: change UA-XXXXX-Y to be your site's ID.
-	Add::custom("<script>window.ga=function(){ga.q.push(arguments)}; ga.q=[]; ga.l=+new Date;ga('create','UA-XXXXX-Y','auto'); ga('send','pageview')</script>");
-	Add::script('https://www.google-analytics.com/analytics.js', 'text/javascript', 'async defer');
+	Add::link('../../node_modules/jquery-datatables-checkboxes/css/dataTables.checkboxes.css', 'stylesheet', 'text/css');
+	Add::script('../../node_modules/jquery-datatables-checkboxes/js/dataTables.checkboxes.min.js', 'text/javascript', 'UTF-8');
 
 	// System JS
 	Add::script('config/system.js', 'text/javascript', 'UTF-8');

@@ -2,10 +2,6 @@
 namespace System\Modules\Crud\Controllers;
 
 use System\Core\Load;
-use System\Libraries\Cookie;
-use System\Modules\Crud\Models\ModelCrud;
-
-use Carbon\Carbon;
 
 class Crud extends Load
 {

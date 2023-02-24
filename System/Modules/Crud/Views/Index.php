@@ -83,11 +83,7 @@
 					<table id="example" class="display responsive" cellspacing="0" width="100%">
 						<thead>
 							<tr>
-								<th>
-									<div class="main-checkbox">
-										<input id="select-all" name="select-all" type="checkbox">
-									</div>
-								</th>
+								<th></th>
 								<th>ID</th>
 								<th>User Code</th>
 								<th>User Name</th>

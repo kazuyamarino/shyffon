@@ -9,6 +9,7 @@
     "foundation-datepicker": "^1.5.6",
     "foundation-sites": "^6.6.3",
     "jquery": "^3.6.0",
+    "jquery-datatables-checkboxes": "^1.2.13",
     "jquery-migrate": "^3.3.2",
     "promise-polyfill": "^8.2.0",
     "sweetalert2": "10.16.9",

@@ -3,9 +3,6 @@ namespace System\Modules\Homepage\Controllers;
 
 use System\Core\Load;
 
-use System\Libraries\Cookie;
-use Carbon\Carbon;
-
 class Hello extends Load
 {
 

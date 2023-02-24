@@ -5,7 +5,7 @@ $(document).ready(function() {
 		"iDisplayLength": 5,
 		"aLengthMenu": [[5, 10, 25, 50, -1], [5, 10, 25, 50, "All"]],
 		"ajax": {
-			"url": base_url("public/data/data.json")  // base_url can be managed in main.js located in the Template/js/ folder
+			"url": base_url("public/data/data.json") // base_url can be managed in main.js located in the Template/js/ folder
 		},
 		"oLanguage": {
 			"oPaginate": {

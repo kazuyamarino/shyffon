@@ -5,7 +5,7 @@ $(document).ready(function () {
 		"aLengthMenu": [[5, 10, 25, 50, -1], [5, 10, 25, 50, "All"]],
 		"stateSave": true,
 		"ajax": {
-			"url": base_url("crud/data.json")  // base_url can be managed in system.js located in the assets/js/config directory
+			"url": base_url("crud/data.json") // base_url can be managed in system.js located in the assets/js/config directory
 		},
 		"columns": [
 			{ "data": "id" },

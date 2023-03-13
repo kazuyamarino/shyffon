@@ -6,7 +6,6 @@ import $ from 'jquery';
 import DataTable from 'datatables.net';
 
 
-
 /**
  * DataTables integration for Foundation. This requires Foundation 5 and
  * DataTables 1.10 or newer.

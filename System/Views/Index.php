@@ -7,26 +7,44 @@
 
 				<div class="row">
 					<div class="large-4 medium-4 cell">
-						<p><a target="_blank" href="https://github.com/kazuyamarino/shyffon#shyffon-contain-package-"><strong>Shyffon contain package</strong></a><br />The package inside Shyffon.</p>
+						<p><a target="_blank" href="https://github.com/kazuyamarino/nsy-docs/blob/master/README.md#codename"><strong>NSY Release Codename</strong></a><br><code>About NSY codename.</code></p>
 					</div>
 					<div class="large-4 medium-4 cell">
-		                <p><a target="_blank" href="https://github.com/kazuyamarino/shyffon#lets-start"><strong>How to dating with Shyffon?</strong></a><br />Setup installation.</p>
-		            </div>
-					<div class="large-4 medium-4 cell">
-						<p><a target="_blank" href="@( base_url('crud') )"><strong>Shyffon CRUD Example</strong></a><br />The CRUD example build by Shyffon.</p>
+						<p><a target="_blank" href="https://github.com/kazuyamarino/nsy-docs/blob/master/README.md#how-to-dating-with-nsy"><strong>How to dating with NSY?</strong></a><br><code>NSY Installation guide.</code></p>
 					</div>
 					<div class="large-4 medium-4 cell">
-						<p><a target="_blank" href="https://github.com/kazuyamarino/nsy-docs/blob/master/README.md#nsy-features-"><strong>NSY Features</strong></a><br />Features available in NSY.</p>
+						<p><a target="_blank" href="https://github.com/kazuyamarino/nsy-docs/blob/master/README.md#crud-example"><strong>Shyffon & Vylma</strong></a><br><code>The CRUD example build by NSY.</code></p>
 					</div>
 					<div class="large-4 medium-4 cell">
-						<p><a target="_blank" href="https://github.com/kazuyamarino/nsy-docs/blob/master/README.md#user-guide-"><strong>NSY User Guide</strong></a><br />The guide before starting to use NSY.</p>
+						<p><a target="_blank" href="https://github.com/kazuyamarino/nsy-docs#features-"><strong>NSY Features</strong></a><br><code>Features available in NSY.</code></p>
 					</div>
 					<div class="large-4 medium-4 cell">
-						<p><a target="_blank" href="https://github.com/kazuyamarino/nsy-docs/blob/master/README.md#system-guide-"><strong>NSY System Guide</strong></a><br />The guide system.</p>
+						<p><a target="_blank" href="https://github.com/kazuyamarino/nsy-docs#nsy-helper-function-"><strong>NSY Helper Function</strong></a><br><code>List of helper functions in NSY</code></p>
+					</div>
+					<div class="large-4 medium-4 cell">
+						<p><a target="_blank" href="https://github.com/kazuyamarino/nsy-docs#external-helper-function-"><strong>External Helper Function</strong></a><br><code>List of external helper functions in NSY</code></p>
+					</div>
+					<div class="large-4 medium-4 cell">
+						<p><a target="_blank" href="https://github.com/kazuyamarino/nsy-docs#nsy-middleware"><strong>NSY Middleware</strong></a><br><code>NSY has support middleware</code></p>
+					</div>
+					<div class="large-4 medium-4 cell">
+						<p><a target="_blank" href="https://github.com/kazuyamarino/nsy-docs#nsy-migration"><strong>NSY Migration</strong></a><br><code>Migration is like version control for your database</code></p>
+					</div>
+					<div class="large-4 medium-4 cell">
+						<p><a target="_blank" href="https://github.com/kazuyamarino/nsy-docs#razr-template-engine"><strong>Razr Template Engine</strong></a><br><code>Razr is a powerful PHP template engine for PHP</code></p>
+					</div>
+					<div class="large-4 medium-4 cell">
+						<p><a target="_blank" href="https://github.com/kazuyamarino/nsy-docs#nsy-security-function"><strong>NSY Security Function</strong></a><br><code>NSY provides security functions including antiXSS and CSRF</code></p>
+					</div>
+					<div class="large-4 medium-4 cell">
+						<p><a target="_blank" href="https://github.com/kazuyamarino/nsy-docs#nsy-controller"><strong>NSY Controller</strong></a><br><code>Controllers act as an interface between Model and View components</code></p>
+					</div>
+					<div class="large-4 medium-4 cell">
+						<p><a target="_blank" href="https://github.com/kazuyamarino/nsy-docs#nsy-model"><strong>NSY Model</strong></a><br><code>The Model component corresponds to all the data-related logic that the user works with</code></p>
 					</div>
 				</div>
 
-				<hr/>
+				<hr />
 
 				<h3>HTML5 Boilerplate! </h3>
 				<p>HTML5 Boilerplate helps you build fast, robust, and adaptable web apps or sites. Kick-start your project with the combined knowledge and effort of 100s of developers, all in one little package.</p>
@@ -42,7 +60,7 @@
 					</div>
 				</div>
 
-				<hr/>
+				<hr />
 
 				<h3>Foundation! </h3>
 				<p>A <a target="_blank" href="http://foundation.zurb.com/learn/about.html">Framework</a> for any device, medium, and accessibility. Foundation is a family of responsive front-end frameworks that make it easy to design beautiful responsive websites, apps and emails that look amazing on any device. Foundation is semantic, readable, flexible, and completely customizable. We’re constantly adding new resources and <a target="_blank" href="http://foundation.zurb.com/develop/building-blocks.html">code snippets</a>, including these handy <a target="_blank" href="http://foundation.zurb.com/templates.html">HTML templates</a> to help get you started!</p>
@@ -77,7 +95,7 @@
 			<div class="grid-x grid-padding-x">
 				<div class="large-12 cell">
 					<div class="callout ">
-					<p><strong>This is a twelve column section in a row.</strong> Each of these includes a div.callout element so you can see where the columns are - it's not required at all for the grid.</p>
+						<p><strong>This is a twelve column section in a row.</strong> Each of these includes a div.callout element so you can see where the columns are - it's not required at all for the grid.</p>
 					</div>
 				</div>
 			</div>
@@ -174,13 +192,13 @@
 
 					<label>Pick one color
 						<fieldset>
-					        <input required type="radio" name="exampleRadio" id="exampleRadioA" value="A">
-					        <label for="exampleRadioA">Red</label>
-					        <input type="radio" name="exampleRadio" id="exampleRadioB" value="B">
-					        <label for="exampleRadioB">Blue</label>
-					        <input type="radio" name="exampleRadio" id="exampleRadioC" value="C">
-					        <label for="exampleRadioC">Green</label>
-				      	</fieldset>
+							<input required type="radio" name="exampleRadio" id="exampleRadioA" value="A">
+							<label for="exampleRadioA">Red</label>
+							<input type="radio" name="exampleRadio" id="exampleRadioB" value="B">
+							<label for="exampleRadioB">Blue</label>
+							<input type="radio" name="exampleRadio" id="exampleRadioC" value="C">
+							<label for="exampleRadioC">Green</label>
+						</fieldset>
 					</label>
 
 					<div class="text-center">
@@ -193,10 +211,11 @@
 
 		<div class="large-4 medium-4 cell">
 			<h5>Try one of these buttons:</h5>
-			<p><a href="#" class="small button">Simple Button</a><br/>
-			<a href="#" class="medium success button">Success Button</a><br/>
-			<a href="#" class="medium alert button">Alert Button</a><br/>
-			<a href="#" class="medium secondary button">Secondary Button</a></p>
+			<p><a href="#" class="small button">Simple Button</a><br />
+				<a href="#" class="medium success button">Success Button</a><br />
+				<a href="#" class="medium alert button">Alert Button</a><br />
+				<a href="#" class="medium secondary button">Secondary Button</a>
+			</p>
 			<div class="callout">
 				<h5>So many components, girl!</h5>
 				<p>A whole kitchen sink of goodies comes with Foundation. Check out the docs to see them all, along with details on making them your own.</p>
@@ -217,17 +236,17 @@
 				</button>
 			</div>
 			<div class="alert callout" data-closable>
-			  <h5>This is Important!</h5>
-			  <p>But when you're done reading it, click the close button in the corner to dismiss this alert.</p>
-			  <button class="close-button" aria-label="Close alert" type="button" data-close>
-				<span aria-hidden="true">&times;</span>
-			  </button>
+				<h5>This is Important!</h5>
+				<p>But when you're done reading it, click the close button in the corner to dismiss this alert.</p>
+				<button class="close-button" aria-label="Close alert" type="button" data-close>
+					<span aria-hidden="true">&times;</span>
+				</button>
 			</div>
 		</div>
 	</div>
 
 	<div class="grid-x grid-padding-x">
-		<hr/>
+		<hr />
 		<div class="large-12 medium-12 cell">
 			<h5>Here is DataTables Examples!</h5>
 			<table id="example" class="display responsive" cellspacing="0" width="100%">

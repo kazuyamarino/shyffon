@@ -1,12 +1,13 @@
 # Include your project-specific ignores in this file
 # Read about how to use .gitignore: https://help.github.com/articles/ignoring-files
 
-src/**
 /env.php
 /.htaccess
 /phpunit.xml
+/MIGRATIONLOG
 public/.htaccess
 System/Controllers/Controller_Test.php
 System/Models/Model_Test.php
 System/Views/View_Test.php
 System/Migrations/Migration_Test.php
+src/**

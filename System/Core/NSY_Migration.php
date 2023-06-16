@@ -13,6 +13,7 @@ class NSY_Migration
 	// Declare properties for Helper
 	static $connection;
 	static $primary;
+	static $datatype;
 
 	/**
 	 * Default Connection
@@ -532,7 +533,7 @@ class NSY_Migration
 			$im_cols = implode(', ', $res);
 			$con_cols = implode('_', $res);
 
-			return self::$primary = 'CONSTRAINT ' . $con_cols . '_' . generate_num(1, 5, 6) . '_PK PRIMARY KEY (' . $im_cols . ')';
+			return self::$primary = 'CONSTRAINT ' . generate_num(1, 5, 6) . '_PK PRIMARY KEY (' . $im_cols . ')';
 		} else {
 			return self::$primary = 'CONSTRAINT ' . $cols . '_' . generate_num(1, 5, 6) . '_PK PRIMARY KEY (' . $cols . ')';
 		}
@@ -554,7 +555,7 @@ class NSY_Migration
 			$im_cols = implode(', ', $res);
 			$con_cols = implode('_', $res);
 
-			return self::$primary = 'CONSTRAINT ' . $con_cols . '_' . generate_num(1, 5, 6) . '_UN UNIQUE (' . $im_cols . ')';
+			return self::$primary = 'CONSTRAINT ' . generate_num(1, 5, 6) . '_UN UNIQUE (' . $im_cols . ')';
 		} else {
 			return self::$primary = 'CONSTRAINT ' . $cols . '_' . generate_num(1, 5, 6) . '_UN UNIQUE (' . $cols . ')';
 		}
@@ -568,9 +569,9 @@ class NSY_Migration
 	public static function timestamps()
 	{
 		$arr_date_cols = [
-			'create_date' => 'DATETIME DEFAULT CURRENT_TIMESTAMP',
-			'update_date' => 'DATETIME DEFAULT CURRENT_TIMESTAMP',
-			'additional_date' => 'DATETIME DEFAULT CURRENT_TIMESTAMP'
+			'create_date DATETIME DEFAULT CURRENT_TIMESTAMP',
+			'update_date DATETIME DEFAULT CURRENT_TIMESTAMP',
+			'additional_date DATETIME DEFAULT CURRENT_TIMESTAMP'
 		];
 
 		return $arr_date_cols;
@@ -580,16 +581,21 @@ class NSY_Migration
 	 * Columns with user defined variables
 	 *
 	 * @param array $cols
-	 * @param array $other_cols
-	 * @param array $other_cols_2
+	 * @param array $timestamps_cols
 	 */
-	public static function cols($cols = array(), $other_cols = array(), $other_cols_2 = array())
+	public static function cols($cols = array(), $timestamps_mark = 'enabled')
 	{
+		$timestamps_cols = self::timestamps();
+
 		if (is_array($cols) || is_object($cols)) {
-			if (is_filled($other_cols) || is_filled($other_cols_2)) {
-				$res_merge_arr = array_merge($cols, $other_cols, $other_cols_2);
-				return $res_merge_arr;
-			} else {
+			if ( $timestamps_mark == 'enabled' ) {
+				if (is_filled($timestamps_cols)) {
+					$merge_cols = array_merge($cols, $timestamps_cols);
+					return $merge_cols;
+				} else {
+					return $cols;
+				}
+			} elseif ( $timestamps_mark == 'disabled' ) {
 				return $cols;
 			}
 		} else {
@@ -613,7 +619,7 @@ class NSY_Migration
 				if (strpos($closure_dt, 'PRIMARY') || strpos($closure_dt, 'UNIQUE')) {
 					$closure_res[] = $closure_dt;
 				} else {
-					$closure_res[] = $key . ' ' . $closure_dt;
+					$closure_res[] = $closure_dt;
 				}
 			}
 			$closure_imp = implode(",\n", $closure_res) . "\n";
@@ -669,8 +675,8 @@ class NSY_Migration
 	{
 		if (is_filled($table)) {
 			$closure_res = array();
-			foreach ($closure() as $key => $closure_dt) {
-				$closure_res[] = 'ALTER TABLE ' . $table . ' ADD ' . $key . ' ' . $closure_dt;
+			foreach ($closure() as $closure_dt) {
+				$closure_res[] = 'ALTER TABLE ' . $table . ' ADD ' . ' ' . $closure_dt;
 			}
 			$closure_imp = implode(";\n", $closure_res) . ";\n";
 
@@ -725,8 +731,8 @@ class NSY_Migration
 	{
 		if (is_filled($table)) {
 			$closure_res = array();
-			foreach ($closure() as $key => $closure_dt) {
-				$closure_res[] = 'ALTER TABLE ' . $table . ' ADD COLUMN ' . $key . ' ' . $closure_dt;
+			foreach ($closure() as $closure_dt) {
+				$closure_res[] = 'ALTER TABLE ' . $table . ' ADD COLUMN ' . ' ' . $closure_dt;
 			}
 			$closure_imp = implode(";\n", $closure_res) . ";\n";
 
@@ -781,7 +787,7 @@ class NSY_Migration
 	{
 		if (is_filled($table)) {
 			$closure_res = array();
-			foreach ($closure() as $key => $closure_dt) {
+			foreach ($closure() as $closure_dt) {
 				$closure_res[] = 'ALTER TABLE ' . $table . ' DROP COLUMN ' . $closure_dt;
 			}
 			$closure_imp = implode(";\n", $closure_res) . ";\n";
@@ -897,11 +903,11 @@ class NSY_Migration
 	{
 		if (is_filled($table)) {
 			$closure_res = array();
-			foreach ($closure() as $key => $closure_dt) {
+			foreach ($closure() as $closure_dt) {
 				if (strpos($closure_dt, 'PRIMARY') || strpos($closure_dt, 'UNIQUE')) {
 					$closure_res[] = 'ALTER TABLE ' . $table . ' ADD ' . $closure_dt;
 				} else {
-					$closure_res[] = 'ALTER TABLE ' . $table . ' MODIFY COLUMN ' . $key . ' ' . $closure_dt;
+					$closure_res[] = 'ALTER TABLE ' . $table . ' MODIFY COLUMN ' . ' ' . $closure_dt;
 				}
 			}
 			$closure_imp = implode(";\n", $closure_res) . ";\n";
@@ -1069,8 +1075,8 @@ class NSY_Migration
 	{
 		if (is_filled($table)) {
 			$closure_res = array();
-			foreach ($closure() as $key => $closure_dt) {
-				$closure_res[] = "exec sp_rename '" . $table . "." . $key . "', '" . $closure_dt . "', 'COLUMN'";
+			foreach ($closure() as $closure_dt) {
+				$closure_res[] = "exec sp_rename '" . $table . "." . "', '" . $closure_dt . "', 'COLUMN'";
 			}
 			$closure_imp = implode(";\n", $closure_res) . ";\n";
 
@@ -1113,5 +1119,459 @@ class NSY_Migration
 		$stmt = null;
 		self::$connection = null;
 		exit();
+	}
+
+	/**
+	 * Define bit datatype
+	 * 
+	 * @param mixed $cols
+	 */
+	public static function bit(mixed $cols = "")
+	{
+		self::$datatype = "$cols BIT";
+		return new self;
+	}
+
+	/**
+	 * Define tinyint datatype
+	 *
+	 * @param mixed $cols
+	 * @param int $length
+	 * 
+	 */
+	public static function tinyint(mixed $cols = "", int $length = 4)
+	{
+		self::$datatype = "$cols TINYINT($length)";
+		return new self;
+	}
+
+	/**
+	 * Define smallint datatype
+	 *
+	 * @param mixed $cols
+	 * @param int $length
+	 * 
+	 */
+	public static function smallint(mixed $cols = "", int $length = 5)
+	{
+		self::$datatype = "$cols SMALLINT($length)";
+		return new self;
+	}
+
+	/**
+	 * Define mediumint datatype
+	 *
+	 * @param mixed $cols
+	 * @param int $length
+	 * 
+	 */
+	public static function mediumint(mixed $cols = "", int $length = 9)
+	{
+		self::$datatype = "$cols MEDIUMINT($length)";
+		return new self;
+	}
+
+	/**
+	 * Define int datatype
+	 *
+	 * @param mixed $cols
+	 * @param int $length
+	 * 
+	 */
+	public static function int(mixed $cols = "", int $length = 11)
+	{
+		self::$datatype = "$cols INT($length)";
+		return new self;
+	}
+
+	/**
+	 * Define integer datatype
+	 *
+	 * @param mixed $cols
+	 * @param int $length
+	 * 
+	 */
+	public static function integer(mixed $cols = "", int $length = 11)
+	{
+		self::$datatype = "$cols INTEGER($length)";
+		return new self;
+	}
+
+	/**
+	 * Define bigint datatype
+	 *
+	 * @param mixed $cols
+	 * @param int $length
+	 * 
+	 */
+	public static function bigint(mixed $cols = "", int $length = 20)
+	{
+		self::$datatype = "$cols BIGINT($length)";
+		return new self;
+	}
+
+	/**
+	 * Define decimal datatype
+	 *
+	 * @param mixed $cols
+	 * @param int $length
+	 * @param int $decimal
+	 * 
+	 */
+	public static function decimal(mixed $cols = "", int $length = 10, int $decimal = 0)
+	{
+		self::$datatype = "$cols DECIMAL($length, $decimal)";
+		return new self;
+	}
+
+	/**
+	 * Define dec datatype
+	 *
+	 * @param mixed $cols
+	 * @param int $length
+	 * @param int $decimal
+	 * 
+	 */
+	public static function dec(mixed $cols = "", int $length = 10, int $decimal = 0)
+	{
+		self::$datatype = "$cols DEC($length, $decimal)";
+		return new self;
+	}
+
+	/**
+	 * Define numeric datatype
+	 *
+	 * @param mixed $cols
+	 * @param int $length
+	 * @param int $decimal
+	 * 
+	 */
+	public static function numeric(mixed $cols = "", int $length = 10, int $decimal = 0)
+	{
+		self::$datatype = "$cols NUMERIC($length, $decimal)";
+		return new self;
+	}
+
+	/**
+	 * Define fixed datatype
+	 *
+	 * @param mixed $cols
+	 * @param int $length
+	 * @param int $decimal
+	 * 
+	 */
+	public static function fixed(mixed $cols = "", int $length = 10, int $decimal = 0)
+	{
+		self::$datatype = "$cols FIXED($length, $decimal)";
+		return new self;
+	}
+
+	/**
+	 * Define float datatype
+	 *
+	 * @param mixed $cols
+	 * @param int $length
+	 * @param int $decimal
+	 * 
+	 */
+	public static function float(mixed $cols = "", int $length = 10, int $decimal = 0)
+	{
+		self::$datatype = "$cols FLOAT($length, $decimal)";
+		return new self;
+	}
+
+	/**
+	 * Define float precision datatype
+	 *
+	 * @param mixed $cols
+	 * @param int $precision
+	 * 
+	 */
+	public static function float_precision(mixed $cols = "", int $precision = 0)
+	{
+		self::$datatype = "$cols FLOAT($precision)";
+		return new self;
+	}
+
+	/**
+	 * Define double datatype
+	 *
+	 * @param mixed $cols
+	 * @param int $length
+	 * @param int $decimal
+	 * 
+	 */
+	public static function double(mixed $cols = "", int $length = 10, int $decimal = 0)
+	{
+		self::$datatype = "$cols DOUBLE($length, $decimal)";
+		return new self;
+	}
+
+	/**
+	 * Define double precision datatype
+	 *
+	 * @param mixed $cols
+	 * @param int $length
+	 * @param int $decimal
+	 * 
+	 */
+	public static function double_precision(mixed $cols = "", int $length = 10, int $decimal = 0)
+	{
+		self::$datatype = "$cols DOUBLE PRECISION($length, $decimal)";
+		return new self;
+	}
+
+	/**
+	 * Define real datatype
+	 *
+	 * @param mixed $cols
+	 * @param int $length
+	 * @param int $decimal
+	 * 
+	 */
+	public static function real(mixed $cols = "", int $length = 10, int $decimal = 0)
+	{
+		self::$datatype = "$cols REAL($length, $decimal)";
+		return new self;
+	}
+
+	/**
+	 * Define bool datatype
+	 * 
+	 * @param mixed $cols
+	 */
+	public static function bool(mixed $cols = "")
+	{
+		self::$datatype = "$cols BOOL";
+		return new self;
+	}
+
+	/**
+	 * Define boolean datatype
+	 * 
+	 * @param mixed $cols
+	 */
+	public static function boolean(mixed $cols = "")
+	{
+		self::$datatype = "$cols BOOLEAN";
+		return new self;
+	}
+
+	/**
+	 * Define char datatype
+	 *
+	 * @param mixed $cols
+	 * @param int $length
+	 * 
+	 */
+	public static function char(mixed $cols = "", int $length = 255)
+	{
+		self::$datatype = "$cols CHAR($length)";
+		return new self;
+	}
+
+	/**
+	 * Define varchar datatype
+	 *
+	 * @param mixed $cols
+	 * @param int $length
+	 * 
+	 */
+	public static function varchar(mixed $cols = "", int $length = 255)
+	{
+		self::$datatype = "$cols VARCHAR($length)";
+		return new self;
+	}
+
+	/**
+	 * Define tinytext datatype
+	 *
+	 * @param mixed $cols
+	 */
+	public static function tinytext(mixed $cols = "")
+	{
+		self::$datatype = "$cols TINYTEXT";
+		return new self;
+	}
+
+	/**
+	 * Define text datatype
+	 *
+	 * @param mixed $cols
+	 */
+	public static function text(mixed $cols = "")
+	{
+		self::$datatype = "$cols TEXT";
+		return new self;
+	}
+
+	/**
+	 * Define mediumtext datatype
+	 *
+	 * @param mixed $cols
+	 */
+	public static function mediumtext(mixed $cols = "")
+	{
+		self::$datatype = "$cols MEDIUMTEXT";
+		return new self;
+	}
+
+	/**
+	 * Define longtext datatype
+	 *
+	 * @param mixed $cols
+	 */
+	public static function longtext(mixed $cols = "")
+	{
+		self::$datatype = "$cols LONGTEXT";
+		return new self;
+	}
+
+	/**
+	 * Define binary datatype
+	 *
+	 * @param mixed $cols
+	 * @param int $length
+	 */
+	public static function binary(mixed $cols = "", int $length = 255)
+	{
+		self::$datatype = "$cols BINARY($length)";
+		return new self;
+	}
+
+	/**
+	 * Define varbinary datatype
+	 *
+	 * @param mixed $cols
+	 * @param int $length
+	 */
+	public static function varbinary(mixed $cols = "", int $length = 255)
+	{
+		self::$datatype = "$cols VARBINARY($length)";
+		return new self;
+	}
+
+	/**
+	 * Define date datatype
+	 *
+	 * @param mixed $cols
+	 */
+	public static function date(mixed $cols = "")
+	{
+		self::$datatype = "$cols DATE";
+		return new self;
+	}
+
+	/**
+	 * Define datetime datatype
+	 *
+	 * @param mixed $cols
+	 */
+	public static function datetime(mixed $cols = "")
+	{
+		self::$datatype = "$cols DATETIME";
+		return new self;
+	}
+
+	/**
+	 * Define timestamp datatype
+	 *
+	 * @param mixed $cols
+	 * @param int $length
+	 */
+	public static function timestamp(mixed $cols = "", int $length = 6)
+	{
+		self::$datatype = "$cols TIMESTAMP($length)";
+		return new self;
+	}
+
+	/**
+	 * Define time datatype
+	 *
+	 * @param mixed $cols
+	 */
+	public static function time(mixed $cols = "")
+	{
+		self::$datatype = "$cols TIME";
+		return new self;
+	}
+
+	/**
+	 * Define year datatype
+	 *
+	 * @param mixed $cols
+	 * @param int $length
+	 */
+	public static function year(mixed $cols = "", int $length = 2)
+	{
+		self::$datatype = "$cols YEAR($length)";
+		return new self;
+	}
+
+	/**
+	 * Define tinyblob datatype
+	 *
+	 * @param mixed $cols
+	 */
+	public static function tinyblob(mixed $cols = "")
+	{
+		self::$datatype = "$cols TINYBLOB";
+		return new self;
+	}
+
+	/**
+	 * Define blob datatype
+	 *
+	 * @param mixed $cols
+	 */
+	public static function blob(mixed $cols = "")
+	{
+		self::$datatype = "$cols BLOB";
+		return new self;
+	}
+
+	/**
+	 * Define mediumblob datatype
+	 *
+	 * @param mixed $cols
+	 */
+	public static function mediumblob(mixed $cols = "")
+	{
+		self::$datatype = "$cols MEDIUMBLOB";
+		return new self;
+	}
+
+	/**
+	 * Define not null function
+	 */
+	public function not_null()
+	{
+		return self::$datatype . " NOT NULL";
+	}
+
+	/**
+	 * Define null function
+	 */
+	public function null()
+	{
+		return self::$datatype . " NULL";
+	}
+
+	/**
+	 * Define auto increment function
+	 */
+	public function auto_increment()
+	{
+		return self::$datatype . " AUTO_INCREMENT";
+	}
+
+	/**
+	 * Define default function
+	 * 
+	 * @param mixed $params
+	 */
+	public function default(mixed $params = '')
+	{
+		return self::$datatype . " NOT NULL DEFAULT $params";
 	}
 }

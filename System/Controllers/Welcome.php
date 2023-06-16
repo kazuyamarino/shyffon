@@ -1,4 +1,5 @@
 <?php
+
 namespace System\Controllers;
 
 use System\Core\Load;
@@ -16,5 +17,4 @@ class Welcome extends Load
 		Load::view(null, "Index");
 		Load::template("Footer");
 	}
-
 }

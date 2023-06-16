@@ -1,7 +1,8 @@
 <?php
+
 /**
-* Site config
-*/
+ * Site config
+ */
 return [
 
 	/*
@@ -12,7 +13,7 @@ return [
 	| This value is for <title> tag.
 	|
 	*/
-	'sitetitle' => '(Shyffon) Foundation & NSY PHP Framework',
+	'sitetitle' => 'NSY PHP Framework',
 
 	/*
 	|--------------------------------------------------------------------------
@@ -42,7 +43,7 @@ return [
 	| This value is for <meta> description tag.
 	|
 	*/
-	'sitedesc' => 'Shyffon is a sweet cake of PHP Framework.',
+	'sitedesc' => 'NSY is a simple PHP Framework that works well on MVC or HMVC mode.',
 
 	/*
 	|--------------------------------------------------------------------------
@@ -62,7 +63,7 @@ return [
 	| Define version of the application
 	|
 	*/
-	'version' => 'v4.4.0',
+	'version' => 'v5.0.0',
 
 	/*
 	|--------------------------------------------------------------------------
@@ -72,6 +73,6 @@ return [
 	| Define codename of the application
 	|
 	*/
-	'codename' => 'Sasando'
+	'codename' => 'Lalove'
 
 ];

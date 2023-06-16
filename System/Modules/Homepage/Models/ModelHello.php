@@ -1,4 +1,5 @@
 <?php
+
 namespace System\Modules\Homepage\Models;
 
 use System\Core\DB;
@@ -15,5 +16,4 @@ class ModelHello extends DB
 	{
 		return "This is HMVC page.";
 	}
-
 }

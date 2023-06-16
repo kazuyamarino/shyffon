@@ -1,4 +1,5 @@
 <?php
+
 namespace System\Modules\Crud\Models;
 
 use System\Core\DB;
@@ -23,7 +24,7 @@ class ModelCrud extends DB
 		// get last id from tb_users
 		$q_select_id = "SELECT MAX(id) FROM tb_users";
 		$last_id = DB::connect()->query($q_select_id)->fetch_column();
-		terner( not_filled($last_id), $last_id = 0, $last_id ); // if last id is 0 then give it 0 value
+		terner(not_filled($last_id), $last_id = 0, $last_id); // if last id is 0 then give it 0 value
 
 		// get last user_code second number from tb_users
 		$q_select_ucode = "SELECT
@@ -31,7 +32,7 @@ class ModelCrud extends DB
 								SUBSTR(user_code, 2, 1) as ucode
 							FROM tb_users ORDER BY id DESC LIMIT 1";
 		$get_ucode_num = DB::connect()->query($q_select_ucode)->style(FETCH_ASSOC)->fetch();
-		terner( $get_ucode_num['ucode'] == 9, ($last_ucode = 0), ($last_ucode = 1 + $get_ucode_num['ucode']) ); // if ucode reach 9 then reset it to 0
+		terner($get_ucode_num['ucode'] == 9, ($last_ucode = 0), ($last_ucode = 1 + $get_ucode_num['ucode'])); // if ucode reach 9 then reset it to 0
 
 		// generate user code and setting up variables
 		$gen_user_code = 2 . $last_ucode . $last_id;
@@ -59,21 +60,21 @@ class ModelCrud extends DB
 								:create_date,
 								:update_date,
 								:adds_date )";
-		DB::connect()->query($q_insert_user)->vars($param)->exec();
+		DB::connect()->query($q_insert_user)->vars($param)->bind()->exec();
 	}
 
 	public function delete_data($param)
 	{
 		// query to delete the data table
 		$query = "DELETE FROM tb_users WHERE id = :id";
-		DB::connect()->query($query)->vars($param)->exec();
+		DB::connect()->query($query)->vars($param)->bind()->exec();
 	}
 
 	public function multidelete_data($data)
 	{
 		// query to delete more than one data table
 		$query = "DELETE FROM tb_users WHERE id IN ($data[0])";
-		DB::connect()->query($query)->vars($data[1])->exec();
+		DB::connect()->query($query)->vars($data[1])->bind()->exec();
 	}
 
 	public function update_data_password_null($param)
@@ -87,7 +88,7 @@ class ModelCrud extends DB
 					update_date   = :update_date,
 					adds_date     = adds_date
 				WHERE id = :id";
-		DB::connect()->query($query)->vars($param)->exec();
+		DB::connect()->query($query)->vars($param)->bind()->exec();
 	}
 
 	public function update_data_password_yes($param)
@@ -101,7 +102,7 @@ class ModelCrud extends DB
 					update_date   = :update_date,
 					adds_date     = adds_date
 				WHERE id = :id";
-		DB::connect()->query($query)->vars($param)->exec();
+		DB::connect()->query($query)->vars($param)->bind()->exec();
 	}
 
 	public function fetch_update($param)
@@ -109,13 +110,12 @@ class ModelCrud extends DB
 		// fetch data from the data table for updating purposes
 		$query = "SELECT * FROM tb_users WHERE id = :id";
 		$data = DB::connect()
-					->query($query)
-					->vars($param)
-					->style(FETCH_ASSOC)
-					->bind(BINDVAL)
-					->fetch();
+			->query($query)
+			->vars($param)
+			->style(FETCH_ASSOC)
+			->bind(BINDVAL)
+			->fetch();
 
 		return $data;
 	}
-
 }

@@ -1,7 +1,10 @@
 <?php
+
 namespace System\Modules\Crud\Controllers;
 
 use System\Core\Load;
+
+use System\Modules\Crud\Models\ModelCrud;
 
 class Crud extends Load
 {
@@ -30,7 +33,7 @@ class Crud extends Load
 
 		// call the method fetch_update
 		$arr = [
-			'data' => Load::model('Crud\ModelCrud')->fetch_update($param)
+			'data' => Load::model(ModelCrud::class)->fetch_update($param)
 		];
 
 		// call header page from template folder
@@ -44,7 +47,7 @@ class Crud extends Load
 	public function crud_data()
 	{
 		// call the method get_data
-		$d = Load::model('Crud\ModelCrud')->get_data();
+		$d = Load::model(ModelCrud::class)->get_data();
 
 		// show result
 		echo $d;
@@ -53,14 +56,14 @@ class Crud extends Load
 	public function crud_insert()
 	{
 		// defined variables
-		$user_code     = Load::model('Crud\ModelCrud')->get_user_code();
+		$user_code     = Load::model(ModelCrud::class)->get_user_code();
 		$user_name     = secure_input(post('username'));
 		$user_password = secure_input(sha1(post('password')));
 		$user_status   = secure_input(post('status'));
-		$date          = gmdate('Y-m-d H:i:s',time()+60*60*7);
+		$date          = gmdate('Y-m-d H:i:s', time() + 60 * 60 * 7);
 
 		// if username, password, & user status is empty or no input, display the message
-		if ( not_filled($user_name) || not_filled($user_password) || not_filled($user_status) ) {
+		if (not_filled($user_name) || not_filled($user_password) || not_filled($user_status)) {
 			echo "Sorry, I can't, pleaseee. The Variables is not filled";
 			exit();
 		} else {
@@ -76,7 +79,7 @@ class Crud extends Load
 			];
 
 			// call the method insert_data
-			Load::model('Crud\ModelCrud')->insert_data($param);
+			Load::model(ModelCrud::class)->insert_data($param);
 
 			// redirect to page url
 			redirect("crud/register-success");
@@ -91,7 +94,7 @@ class Crud extends Load
 		];
 
 		// call the method delete_data
-		Load::model('Crud\ModelCrud')->delete_data($param);
+		Load::model(ModelCrud::class)->delete_data($param);
 
 		// redirect to page url
 		redirect("crud/delete-success");
@@ -103,13 +106,13 @@ class Crud extends Load
 		$ids  = post('admin_id');
 
 		// check if variable empty
-		if ( not_filled($ids) ) {
+		if (not_filled($ids)) {
 			redirect("crud/must-select");
 		} else {
 			$data = sequence(":id", $ids);
 
 			// call the method delete_data
-			Load::model('Crud\ModelCrud')->multidelete_data($data);
+			Load::model(ModelCrud::class)->multidelete_data($data);
 
 			// redirect to page url
 			redirect("crud/delete-success");
@@ -123,11 +126,10 @@ class Crud extends Load
 		$user_password  = secure_input(sha1(post('password')));
 		$check_password = secure_input(post('password'));
 		$user_status    = secure_input(post('status'));
-		$date           = gmdate('Y-m-d H:i:s',time()+60*60*7);
+		$date           = gmdate('Y-m-d H:i:s', time() + 60 * 60 * 7);
 
 		// check if variable empty
-		if ( not_filled($check_password) )
-		{
+		if (not_filled($check_password)) {
 			// and then, if variable check password is empty, send paramater update without user_password.
 			$param = [
 				':id'          => $id,
@@ -137,7 +139,7 @@ class Crud extends Load
 			];
 
 			// call the method update_data
-			Load::model('Crud\ModelCrud')->update_data_password_null($param);
+			Load::model(ModelCrud::class)->update_data_password_null($param);
 
 			// redirect to page url
 			redirect("crud/update-success");
@@ -152,11 +154,10 @@ class Crud extends Load
 			];
 
 			// call the method update_data
-			Load::model('Crud\ModelCrud')->update_data_password_yes($param);
+			Load::model(ModelCrud::class)->update_data_password_yes($param);
 
 			// redirect to page url
 			redirect("crud/update-success");
 		}
 	}
-
 }

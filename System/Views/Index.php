@@ -10,7 +10,7 @@
 						<p><a target="_blank" href="https://github.com/kazuyamarino/nsy-docs/blob/master/README.md#codename"><strong>NSY Release Codename</strong></a><br><code>About NSY codename.</code></p>
 					</div>
 					<div class="large-4 medium-4 cell">
-						<p><a target="_blank" href="https://github.com/kazuyamarino/shyffon#lets-start"><strong>How to dating with Shyffon?</strong></a><br><code>Shyffon Installation guide.</code></p>
+						<p><a target="_blank" href="https://github.com/kazuyamarino/shyffon#how-to-dating-with-shyffon"><strong>How to dating with Shyffon?</strong></a><br><code>Shyffon Installation guide.</code></p>
 					</div>
 					<div class="large-4 medium-4 cell">
 						<p><a target="_blank" href="https://github.com/kazuyamarino/nsy-docs/blob/master/README.md#crud-example"><strong>Shyffon & Vylma</strong></a><br><code>The CRUD example build by NSY.</code></p>

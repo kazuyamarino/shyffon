@@ -10,37 +10,37 @@
 						<p><a target="_blank" href="https://github.com/kazuyamarino/nsy-docs/blob/master/README.md#codename"><strong>NSY Release Codename</strong></a><br><code>About NSY codename.</code></p>
 					</div>
 					<div class="large-4 medium-4 cell">
-						<p><a target="_blank" href="https://github.com/kazuyamarino/nsy-docs/blob/master/README.md#how-to-dating-with-nsy"><strong>How to dating with NSY?</strong></a><br><code>NSY Installation guide.</code></p>
+						<p><a target="_blank" href="https://github.com/kazuyamarino/shyffon#lets-start"><strong>How to dating with Shyffon?</strong></a><br><code>Shyffon Installation guide.</code></p>
 					</div>
 					<div class="large-4 medium-4 cell">
 						<p><a target="_blank" href="https://github.com/kazuyamarino/nsy-docs/blob/master/README.md#crud-example"><strong>Shyffon & Vylma</strong></a><br><code>The CRUD example build by NSY.</code></p>
 					</div>
 					<div class="large-4 medium-4 cell">
-						<p><a target="_blank" href="https://github.com/kazuyamarino/nsy-docs#features-"><strong>NSY Features</strong></a><br><code>Features available in NSY.</code></p>
+						<p><a target="_blank" href="https://github.com/kazuyamarino/nsy-docs/blob/master/README.md#features"><strong>NSY Features</strong></a><br><code>Features available in NSY.</code></p>
 					</div>
 					<div class="large-4 medium-4 cell">
-						<p><a target="_blank" href="https://github.com/kazuyamarino/nsy-docs#nsy-helper-function-"><strong>NSY Helper Function</strong></a><br><code>List of helper functions in NSY</code></p>
+						<p><a target="_blank" href="https://github.com/kazuyamarino/nsy-docs/blob/master/README.md#nsy-helper-function"><strong>NSY Helper Function</strong></a><br><code>List of helper functions in NSY</code></p>
 					</div>
 					<div class="large-4 medium-4 cell">
-						<p><a target="_blank" href="https://github.com/kazuyamarino/nsy-docs#external-helper-function-"><strong>External Helper Function</strong></a><br><code>List of external helper functions in NSY</code></p>
+						<p><a target="_blank" href="https://github.com/kazuyamarino/nsy-docs/blob/master/README.md#external-helper-function"><strong>External Helper Function</strong></a><br><code>List of external helper functions in NSY</code></p>
 					</div>
 					<div class="large-4 medium-4 cell">
-						<p><a target="_blank" href="https://github.com/kazuyamarino/nsy-docs#nsy-middleware"><strong>NSY Middleware</strong></a><br><code>NSY has support middleware</code></p>
+						<p><a target="_blank" href="https://github.com/kazuyamarino/nsy-docs/blob/master/README.md#nsy-middleware"><strong>NSY Middleware</strong></a><br><code>NSY has support middleware</code></p>
 					</div>
 					<div class="large-4 medium-4 cell">
-						<p><a target="_blank" href="https://github.com/kazuyamarino/nsy-docs#nsy-migration"><strong>NSY Migration</strong></a><br><code>Migration is like version control for your database</code></p>
+						<p><a target="_blank" href="https://github.com/kazuyamarino/nsy-docs/blob/master/README.md#nsy-migration"><strong>NSY Migration</strong></a><br><code>Migration is like version control for your database</code></p>
 					</div>
 					<div class="large-4 medium-4 cell">
-						<p><a target="_blank" href="https://github.com/kazuyamarino/nsy-docs#razr-template-engine"><strong>Razr Template Engine</strong></a><br><code>Razr is a powerful PHP template engine for PHP</code></p>
+						<p><a target="_blank" href="https://github.com/kazuyamarino/nsy-docs/blob/master/README.md#razr-template-engine"><strong>Razr Template Engine</strong></a><br><code>Razr is a powerful PHP template engine for PHP</code></p>
 					</div>
 					<div class="large-4 medium-4 cell">
-						<p><a target="_blank" href="https://github.com/kazuyamarino/nsy-docs#nsy-security-function"><strong>NSY Security Function</strong></a><br><code>NSY provides security functions including antiXSS and CSRF</code></p>
+						<p><a target="_blank" href="https://github.com/kazuyamarino/nsy-docs/blob/master/README.md#nsy-security-function"><strong>NSY Security Function</strong></a><br><code>NSY provides security functions including antiXSS and CSRF</code></p>
 					</div>
 					<div class="large-4 medium-4 cell">
-						<p><a target="_blank" href="https://github.com/kazuyamarino/nsy-docs#nsy-controller"><strong>NSY Controller</strong></a><br><code>Controllers act as an interface between Model and View components</code></p>
+						<p><a target="_blank" href="https://github.com/kazuyamarino/nsy-docs/blob/master/README.md#nsy-controller"><strong>NSY Controller</strong></a><br><code>Controllers act as an interface between Model and View components</code></p>
 					</div>
 					<div class="large-4 medium-4 cell">
-						<p><a target="_blank" href="https://github.com/kazuyamarino/nsy-docs#nsy-model"><strong>NSY Model</strong></a><br><code>The Model component corresponds to all the data-related logic that the user works with</code></p>
+						<p><a target="_blank" href="https://github.com/kazuyamarino/nsy-docs/blob/master/README.md#nsy-model"><strong>NSY Model</strong></a><br><code>The Model component corresponds to all the data-related logic that the user works with</code></p>
 					</div>
 				</div>
 

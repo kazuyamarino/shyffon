@@ -6,6 +6,8 @@
 /phpunit.xml
 /MIGRATIONLOG
 public/.htaccess
+
+System/Test
 System/Controllers/Controller_Test.php
 System/Models/Model_Test.php
 System/Views/View_Test.php

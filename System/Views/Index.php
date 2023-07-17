@@ -68,12 +68,6 @@
 					<div class="large-4 medium-4 cell">
 						<p><a target="_blank" href="http://foundation.zurb.com/sites/docs/">Foundation Documentation</a><br />Everything you need to know about using the framework.</p>
 					</div>
-					<div class="large-4 medium-4 cell">
-						<p><a target="_blank" href="http://zurb.com/university/code-skills">Foundation Code Skills</a><br />These online courses offer you a chance to better understand how Foundation works and how you can master it to create awesome projects.</p>
-					</div>
-					<div class="large-4 medium-4 cell">
-						<p><a target="_blank" href="http://foundation.zurb.com/forum">Foundation Forum</a><br />Join the Foundation community to ask a question or show off your knowlege.</p>
-					</div>
 				</div>
 				<div class="row">
 					<div class="large-4 medium-4 medium-push-2 cell">

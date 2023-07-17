@@ -38,18 +38,19 @@
 
 					<label for="radio-stat">Status Active&nbsp;<small>(required)</small></label>
 					<div id="radio-stat" class="radio-group">
-						<input type="radio" name="status" value="Y" id="act-stat" @( terner( ('Y' == $data['user_status']), 'checked', '') ) required><label for="act-stat">Yes</label>
-						<input type="radio" name="status" value="N" id="deact-stat" @( terner( ('N' == $data['user_status']), 'checked', '' ) )><label for="deact-stat">No</label>
+						<input type="radio" name="status" value="Y" id="act-stat" @( terner( ('Y'==$data['user_status']), 'checked' , '' ) ) required><label for="act-stat">Yes</label>
+						<input type="radio" name="status" value="N" id="deact-stat" @( terner( ('N'==$data['user_status']), 'checked' , '' ) )><label for="deact-stat">No</label>
 						<span class="form-error">Must select at least one</span>
 					</div>
 					<p class="help-text" id="status-help">Choose one user status.</p>
 
 					<div class="action-btn text-center">
 						<button class="button" type="submit">Update</button>
-						<button class="button secondary" type="reset">Reset</button></div>
+						<button class="button secondary" type="reset">Reset</button>
 					</div>
-				</form>
-			</div>
+				</div>
+			</form>
 		</div>
 	</div>
+</div>
 </div>

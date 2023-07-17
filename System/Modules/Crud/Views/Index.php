@@ -62,41 +62,42 @@
 					</div>
 					<div class="action-btn text-center">
 						<button class="button" type="submit">Submit</button>
-						<button class="button secondary" type="reset">Reset</button></div>
+						<button class="button secondary" type="reset">Reset</button>
 					</div>
-				</form>
-			</div>
-		</div>
-
-		<div class="grid-x grid-padding-x">
-			<div class="large-12 medium-12 cell">
-				<form id="multidelete-frm" action="@( base_url('crud/multidelete') )" method="POST" data-abide novalidate>
-					<div class="grid-x">
-						<div class="large-6 cell">
-							<h5>Users Database</h5>
-						</div>
-						<div class="large-6 cell text-right">
-							<button id="reset-filter" class="button secondary" type="reset">Reset</button>
-							<button id="multidelete-btn" class="button alert" type="button">Delete Selected</button>
-						</div>
-					</div>
-					<table id="example" class="display responsive" cellspacing="0" width="100%">
-						<thead>
-							<tr>
-								<th></th>
-								<th>ID</th>
-								<th>User Code</th>
-								<th>User Name</th>
-								<th>Status</th>
-								<th>Create Date</th>
-								<th>Update Date</th>
-								<th>Additional Date</th>
-								<th>Action</th>
-							</tr>
-						</thead>
-					</table>
-				</form>
-			</div>
+				</div>
+			</form>
 		</div>
 	</div>
+
+	<div class="grid-x grid-padding-x">
+		<div class="large-12 medium-12 cell">
+			<form id="multidelete-frm" action="@( base_url('crud/multidelete') )" method="POST" data-abide novalidate>
+				<div class="grid-x">
+					<div class="large-6 cell">
+						<h5>Users Database</h5>
+					</div>
+					<div class="large-6 cell text-right">
+						<button id="reset-filter" class="button secondary" type="reset">Reset</button>
+						<button id="multidelete-btn" class="button alert" type="button">Delete Selected</button>
+					</div>
+				</div>
+				<table id="example" class="display responsive" cellspacing="0" width="100%">
+					<thead>
+						<tr>
+							<th></th>
+							<th>ID</th>
+							<th>User Code</th>
+							<th>User Name</th>
+							<th>Status</th>
+							<th>Create Date</th>
+							<th>Update Date</th>
+							<th>Additional Date</th>
+							<th>Action</th>
+						</tr>
+					</thead>
+				</table>
+			</form>
+		</div>
+	</div>
+</div>
 </div>

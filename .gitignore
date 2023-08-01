@@ -12,4 +12,7 @@ System/Controllers/Controller_Test.php
 System/Models/Model_Test.php
 System/Views/View_Test.php
 System/Migrations/Migration_Test.php
-src/**
+
+System/Routes/Test_Route.php
+System/Controllers/C_Test_Route.php
+System/Modules/*/Controllers/C_Test_Route_HMVC.php

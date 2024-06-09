@@ -15,7 +15,7 @@ $(document).ready(function () {
 			{ "data": "user_status" },
 			{ "data": "create_date" },
 			{ "data": "update_date" },
-			{ "data": "adds_date" },
+			{ "data": "additional_date" },
 			{ "data": "id" }
 		],
 		'columnDefs': [

@@ -57,12 +57,12 @@ class Controller_Crud extends Load
 	{
 		// defined variables
 		$user_code     = Load::model(Model_Crud::class)->get_user_code();
-		$user_name     = secure_input(post('user_name'));
-		$user_password = secure_input(sha1(post('user_password')));
-		$user_status   = secure_input(post('user_status'));
+		$user_name     = secure_input(post('username'));
+		$user_password = secure_input(sha1(post('password')));
+		$user_status   = secure_input(post('status'));
 		$date          = gmdate('Y-m-d H:i:s', time() + 60 * 60 * 7);
 
-		// if user_name, password, & user status is empty or no input, display the message
+		// if username, password, & user status is empty or no input, display the message
 		if (not_filled($user_name) || not_filled($user_password) || not_filled($user_status)) {
 			echo "Sorry, I can't, pleaseee. The Variables is not filled";
 			exit();
@@ -122,10 +122,10 @@ class Controller_Crud extends Load
 	public function crud_update($id)
 	{
 		// siapkan variable update query
-		$user_name      = secure_input(post('user_name'));
-		$user_password  = secure_input(sha1(post('user_password')));
-		$check_password = secure_input(post('user_password'));
-		$user_status    = secure_input(post('user_status'));
+		$user_name      = secure_input(post('username'));
+		$user_password  = secure_input(sha1(post('password')));
+		$check_password = secure_input(post('password'));
+		$user_status    = secure_input(post('status'));
 		$date           = gmdate('Y-m-d H:i:s', time() + 60 * 60 * 7);
 
 		// check if variable empty

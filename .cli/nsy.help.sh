@@ -10,7 +10,7 @@ run_help() {
 	printf "AUTHOR :\n"
 	printf " Vikry Yuansah\n\n"
 	printf "LINK :\n"
-	printf " https://github.com/kazuyamarino/nsy-docs/blob/master/USERGUIDE.md#nsy-cli-command-line\n\n"
+	printf " https://github.com/kazuyamarino/nsy-docs/blob/master/OVERVIEW.md#nsy-cli-command-line-interface\n\n"
 
 	printf "COMMANDS :\n"
 	printf " --install\t\t Install or update NSY CLI\n"
@@ -26,10 +26,10 @@ run_help() {
 	printf " make:controller\t Create a MVC or HMVC controller directory\n"
 	printf " make:model\t\t Create a MVC or HMVC model directory\n"
 	printf " make:migrate\t\t Create a migration class file\n"
-	printf " run:migrate\t\t Create a migration class file\n"
-	printf " make:module\t\t Run the migration class file\n"
+	printf " make:module\t\t Create a module directory\n"
 	printf " make:after-middleware\t Create a after layer middleware\n"
-	printf " make:before-middleware\t Create a before layer middleware\n\n"
+	printf " make:before-middleware\t Create a before layer middleware\n"
+	printf " run:migrate\t\t Run migration class file\n\n"
 
 	printf "COMMAND OPTIONS :\n"
 	printf " mvc\t set the command value for mvc mode\n"

@@ -1,5 +1,4 @@
 <?php
-
 use System\Middlewares\BeforeLayer;
 use System\Middlewares\AfterLayer;
 
@@ -15,11 +14,11 @@ use System\Middlewares\AfterLayer;
 // Route method : any|get|post|put|patch|delete|head|options
 
 // MVC Route
-Route::get('/', function () {
+Route::get('/', function() {
 	$middleware = [
 		new BeforeLayer(),
-		new AfterLayer()
-	];
+        new AfterLayer()
+    ];
 
-	Route::middleware($middleware)->for([System\Controllers\Welcome::class, 'index']);
+	Route::middleware($middleware)->for([System\Apps\General\Controllers\Controller_Welcome::class, 'index']);
 });

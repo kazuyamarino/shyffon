@@ -11,4 +11,4 @@
 // Route method : get|post|put|patch|delete|head|options
 
 // HMVC Route
-Route::get('/hmvc', [System\Modules\Homepage\Controllers\Hello::class, 'index_hmvc']);
+Route::get('/hmvc', [System\Apps\Modules\HMVC\Controllers\Controller_Hello::class, 'index_hmvc']);

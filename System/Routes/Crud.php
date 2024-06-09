@@ -12,31 +12,31 @@
 
 // Crud Route
 Route::group('/crud', function () {
-	// Crud Homepage
-	Route::get('', [System\Modules\Crud\Controllers\Crud::class, 'crud_homepage']);
+	// Crud module
+	Route::get('', [System\Apps\Modules\Crud\Controllers\Controller_Crud::class, 'crud_homepage']);
 	Route::get('/(:any)', function ($message) {
-		Route::goto([System\Modules\Crud\Controllers\Crud::class, 'crud_homepage'], $message);
+		Route::goto([System\Apps\Modules\Crud\Controllers\Controller_Crud::class, 'crud_homepage'], $message);
 	});
 
 	// Insert data process
-	Route::post('/insert', [System\Modules\Crud\Controllers\Crud::class, 'crud_insert']);
+	Route::post('/insert', [System\Apps\Modules\Crud\Controllers\Controller_Crud::class, 'crud_insert']);
 
 	// Delete data process
 	Route::get('/delete/(:num)', function ($id) {
-		Route::goto([System\Modules\Crud\Controllers\Crud::class, 'crud_delete'], $id);
+		Route::goto([System\Apps\Modules\Crud\Controllers\Controller_Crud::class, 'crud_delete'], $id);
 	});
-	Route::post('/multidelete', [System\Modules\Crud\Controllers\Crud::class, 'crud_multidelete']);
+	Route::post('/multidelete', [System\Apps\Modules\Crud\Controllers\Controller_Crud::class, 'crud_multidelete']);
 
 	// Update data process
 	Route::post('/update/(:num)', function ($id) {
-		Route::goto([System\Modules\Crud\Controllers\Crud::class, 'crud_update'], $id);
+		Route::goto([System\Apps\Modules\Crud\Controllers\Controller_Crud::class, 'crud_update'], $id);
 	});
 
 	// fetch data for update
 	Route::get('/fetch/(:num)', function ($id) {
-		Route::goto([System\Modules\Crud\Controllers\Crud::class, 'crud_fetch'], $id);
+		Route::goto([System\Apps\Modules\Crud\Controllers\Controller_Crud::class, 'crud_fetch'], $id);
 	});
 
 	// Show all data on json format
-	Route::get('/data.json', [System\Modules\Crud\Controllers\Crud::class, 'crud_data']);
+	Route::get('/data.json', [System\Apps\Modules\Crud\Controllers\Controller_Crud::class, 'crud_data']);
 });

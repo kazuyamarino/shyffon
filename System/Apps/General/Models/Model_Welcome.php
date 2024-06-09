@@ -1,10 +1,10 @@
 <?php
 
-namespace System\Modules\Homepage\Models;
+namespace System\Apps\General\Models;
 
 use System\Core\DB;
 
-class ModelHello extends DB
+class Model_Welcome extends DB
 {
 
 	public function FunctionName(Type $var = null)

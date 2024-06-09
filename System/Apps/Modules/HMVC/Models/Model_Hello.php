@@ -1,10 +1,10 @@
 <?php
 
-namespace System\Models;
+namespace System\Apps\Modules\HMVC\Models;
 
 use System\Core\DB;
 
-class ModelWelcome extends DB
+class Model_Hello extends DB
 {
 
 	public function FunctionName(Type $var = null)

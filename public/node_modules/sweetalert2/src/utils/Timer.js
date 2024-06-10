@@ -1,5 +1,9 @@
 export default class Timer {
-  constructor (callback, delay) {
+  /**
+   * @param {Function} callback
+   * @param {number} delay
+   */
+  constructor(callback, delay) {
     this.callback = callback
     this.remaining = delay
     this.running = false
@@ -7,7 +11,10 @@ export default class Timer {
     this.start()
   }
 
-  start () {
+  /**
+   * @returns {number}
+   */
+  start() {
     if (!this.running) {
       this.running = true
       this.started = new Date()
@@ -16,16 +23,23 @@ export default class Timer {
     return this.remaining
   }
 
-  stop () {
-    if (this.running) {
+  /**
+   * @returns {number}
+   */
+  stop() {
+    if (this.started && this.running) {
       this.running = false
       clearTimeout(this.id)
-      this.remaining -= new Date() - this.started
+      this.remaining -= new Date().getTime() - this.started.getTime()
     }
     return this.remaining
   }
 
-  increase (n) {
+  /**
+   * @param {number} n
+   * @returns {number}
+   */
+  increase(n) {
     const running = this.running
     if (running) {
       this.stop()
@@ -37,7 +51,10 @@ export default class Timer {
     return this.remaining
   }
 
-  getTimerLeft () {
+  /**
+   * @returns {number}
+   */
+  getTimerLeft() {
     if (this.running) {
       this.stop()
       this.start()
@@ -45,7 +62,10 @@ export default class Timer {
     return this.remaining
   }
 
-  isRunning () {
+  /**
+   * @returns {boolean}
+   */
+  isRunning() {
     return this.running
   }
 }

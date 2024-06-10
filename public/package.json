@@ -4,16 +4,16 @@
   "description": "Shyffon",
   "main": "index.js",
   "dependencies": {
-    "@fortawesome/fontawesome-free": "^5.15.3",
-    "datatables.net-zf": "^1.10.24",
+    "@fortawesome/fontawesome-free": "^6.5.2",
+    "datatables.net-zf": "^2.0.8",
     "foundation-datepicker": "^1.5.6",
-    "foundation-sites": "^6.6.3",
-    "jquery": "^3.6.0",
-    "jquery-datatables-checkboxes": "^1.2.13",
-    "jquery-migrate": "^3.3.2",
-    "promise-polyfill": "^8.2.0",
-    "sweetalert2": "10.16.9",
-    "what-input": "^5.2.10"
+    "foundation-sites": "^6.8.1",
+    "jquery": "^3.7.1",
+    "jquery-datatables-checkboxes": "^1.2.14",
+    "jquery-migrate": "^3.4.1",
+    "promise-polyfill": "^8.3.0",
+    "sweetalert2": "11.11.1",
+    "what-input": "^5.2.12"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

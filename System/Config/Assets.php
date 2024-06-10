@@ -73,7 +73,8 @@ function footer_assets()
 
 function sweetalert_init()
 {
-	Add::script('../../node_modules/sweetalert2/dist/sweetalert2.all.min.js', 'text/javascript', 'UTF-8');
+	Add::script('../../node_modules/sweetalert2/dist/sweetalert2.min.js', 'text/javascript', 'UTF-8');
+	Add::link('../../node_modules/sweetalert2/dist/sweetalert2.min.css', 'stylesheet', 'text/css');
 	Add::script('../../node_modules/promise-polyfill/dist/polyfill.min.js', 'text/javascript', 'UTF-8');
 }
 

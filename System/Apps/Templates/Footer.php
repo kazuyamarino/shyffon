@@ -15,7 +15,7 @@
 					<div class="list-group">
 						<i class="fab fa-twitter fa-2x fa-fw"></i><a class="list-group-item" target="_blank" href="https://twitter.com/uybeye">&nbsp; Twitter</a><hr>
 						<i class="fab fa-facebook fa-2x fa-fw"></i><a class="list-group-item" target="_blank" href="#">&nbsp; Facebook</a><hr>
-						<i class="fab fa-linkedin fa-2x fa-fw"></i><a class="list-group-item" target="_blank" href="https://id.linkedin.com/in/vikry-yuansyah-1265a4a7">&nbsp; Linkedin</a><hr>
+						<i class="fab fa-linkedin fa-2x fa-fw"></i><a class="list-group-item" target="_blank" href="https://id.linkedin.com/in/vikry-yuansah-1265a4a7">&nbsp; Linkedin</a><hr>
 						<i class="fas fa-envelope fa-2x fa-fw"></i><a class="list-group-item" href="@( 'mailto:admin@kazuyamarino.com' )">&nbsp; Email</a>
 					</div>
 					<hr class="show-for-small-only"/>

@@ -695,7 +695,7 @@ function (_Plugin) {
 			  return true;
 		  }
 
-		  // edited by Kazuya Marino
+		  // edited by Vikry aka Kazuya Marino
 		  switch ($el[0].type) {
 			  case 'radio':
 			  validated = this.validateRadio($el.attr('name'));

@@ -47,3 +47,8 @@ function base_url(url, port)
 		}
 	}
 }
+
+/*
+Foundation initialize
+ */
+$(document).foundation();

@@ -85,7 +85,7 @@
 					<thead>
 						<tr>
 							<th class="id">
-								<input type="checkbox" id="select-all">
+									<input type="checkbox" id="select-all">
 							</th>
 							<th class="user_code">User Code</th>
 							<th class="user_name">User Name</th>

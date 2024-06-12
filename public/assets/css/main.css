@@ -65,8 +65,11 @@ table th {
 	text-align: center !important;
 }
 table td {
-	border-bottom: 0.2em solid ##FFFFFF;
+	border-bottom: 0.2em solid #FFFFFF;
 	padding: 0.3em !important;
+}
+[type=checkbox], [type=file], [type=radio] {
+	margin: 0 auto !important;
 }
 
 /*

@@ -58,7 +58,7 @@ function footer_assets()
 	Add::script('../../node_modules/foundation-datepicker/js/foundation-datepicker.min.js', 'text/javascript', 'UTF-8');
 
 	// Datatables JS
-	Add::script('../../node_modules/datatables.net/js/jquery.dataTables.min.js', 'text/javascript', 'UTF-8');
+	Add::script('../../node_modules/datatables.net/js/dataTables.min.js', 'text/javascript', 'UTF-8');
 	Add::script('../../node_modules/datatables.net-zf/js/dataTables.foundation.min.js', 'text/javascript', 'UTF-8');
 	Add::script('responsive-tables.min.js', 'text/javascript', 'UTF-8');
 	Add::link('../../node_modules/jquery-datatables-checkboxes/css/dataTables.checkboxes.css', 'stylesheet', 'text/css');

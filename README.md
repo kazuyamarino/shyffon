@@ -118,7 +118,7 @@ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/
 
 * Download source from this link [https://github.com/kazuyamarino/shyffon/releases](https://github.com/kazuyamarino/shyffon/releases).
 * Simply rename the source folder that has been downloaded to `shyffon` & copy it to your `html` or `htdocs` or anythings folder.
-* For apache, please go to the `docs/apache` folder and read the Readme.txt.
+* For apache, please go to the `docs/apache` folder and read the `Readme.txt`.
 
 ```text
 // Apache Readme.txt
@@ -139,7 +139,7 @@ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/
 * Import database example. (see below)
 * And save the date..
 
-### From Composer
+### Download from Composer
 
 #### Install NSY by creating a new directory called `blog`
 

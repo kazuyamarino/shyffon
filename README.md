@@ -126,6 +126,15 @@ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/
 2. Copy .htaccess inside 'for_root' folder to 'root(shyffon)' folder
 ```
 
+* For nginx, please go to the `docs/nginx` folder and read the `Readme.txt` too.
+
+```text
+// Nginx Readme.txt
+1. Open 'sudo nano /etc/nginx/sites-enabled/default'
+2. Copy the text in the 'default' file and paste it to /etc/nginx/sites-enabled/default
+3. And restart nginx service, 'sudo service nginx restart'
+```
+
 * Go to the `docs/env.example` folder and copy the `env.example` to root folder, and rename it to `env`.
 * Import database example. (see below)
 * And save the date..
@@ -151,17 +160,6 @@ cd blog && nsy --setup
 
 Enter directory name >
 blog
-```
-
----
-
-```text
-For nginx, please go to the `docs/nginx` folder and read the `Readme.txt` too.
-
-// Nginx Readme.txt
-1. Open 'sudo nano /etc/nginx/sites-enabled/default'
-2. Copy the text in the 'default' file and paste it to /etc/nginx/sites-enabled/default
-3. And restart nginx service, 'sudo service nginx restart'
 ```
 
 ---

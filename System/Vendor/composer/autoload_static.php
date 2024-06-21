@@ -17,6 +17,7 @@ class ComposerStaticInityour_suffixed
         'a4a119a56e50fbb293281d9a48007e0e' => __DIR__ . '/..' . '/symfony/polyfill-php80/bootstrap.php',
         'a1105708a18b76903365ca1c4aa61b02' => __DIR__ . '/..' . '/symfony/translation/Resources/functions.php',
         'b46ad4fe52f4d1899a2951c7e6ea56b0' => __DIR__ . '/..' . '/voku/portable-utf8/bootstrap.php',
+        '094883ee9da9e6fabd95b86a5ef61b72' => __DIR__ . '/..' . '/latitude/latitude/src/functions.php',
         'ec07570ca5a812141189b1fa81503674' => __DIR__ . '/..' . '/phpunit/phpunit/src/Framework/Assert/Functions.php',
         'e1df08c522e459215e49702ec8129902' => __DIR__ . '/../../..' . '/System/Helpers/CodeIgniter_Helpers.php',
     );
@@ -40,6 +41,10 @@ class ComposerStaticInityour_suffixed
             'Symfony\\Component\\Translation\\' => 30,
             'Symfony\\Component\\HtmlSanitizer\\' => 32,
         ),
+        'R' => 
+        array (
+            'Rakit\\Validation\\' => 17,
+        ),
         'P' => 
         array (
             'Psr\\Http\\Message\\' => 17,
@@ -51,11 +56,6 @@ class ComposerStaticInityour_suffixed
         array (
             'Optimus\\Onion\\' => 14,
         ),
-        'N' => 
-        array (
-            'NilPortugues\\Sql\\QueryFormatter\\' => 32,
-            'NilPortugues\\Sql\\QueryBuilder\\' => 30,
-        ),
         'M' => 
         array (
             'Masterminds\\' => 12,
@@ -63,6 +63,7 @@ class ComposerStaticInityour_suffixed
         'L' => 
         array (
             'League\\Uri\\' => 11,
+            'Latitude\\QueryBuilder\\' => 22,
             'Lablnet\\' => 8,
         ),
         'J' => 
@@ -138,6 +139,10 @@ class ComposerStaticInityour_suffixed
         array (
             0 => __DIR__ . '/..' . '/symfony/html-sanitizer',
         ),
+        'Rakit\\Validation\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/rakit/validation/src',
+        ),
         'Psr\\Http\\Message\\' => 
         array (
             0 => __DIR__ . '/..' . '/psr/http-factory/src',
@@ -159,14 +164,6 @@ class ComposerStaticInityour_suffixed
         array (
             0 => __DIR__ . '/..' . '/optimus/onion/src',
         ),
-        'NilPortugues\\Sql\\QueryFormatter\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/nilportugues/sql-query-formatter/src',
-        ),
-        'NilPortugues\\Sql\\QueryBuilder\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/nilportugues/sql-query-builder/src',
-        ),
         'Masterminds\\' => 
         array (
             0 => __DIR__ . '/..' . '/masterminds/html5/src',
@@ -175,6 +172,10 @@ class ComposerStaticInityour_suffixed
         array (
             0 => __DIR__ . '/..' . '/league/uri',
             1 => __DIR__ . '/..' . '/league/uri-interfaces',
+        ),
+        'Latitude\\QueryBuilder\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/latitude/latitude/src',
         ),
         'Lablnet\\' => 
         array (
@@ -215,16 +216,6 @@ class ComposerStaticInityour_suffixed
         'Carbon\\' => 
         array (
             0 => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon',
-        ),
-    );
-
-    public static $prefixesPsr0 = array (
-        'F' => 
-        array (
-            'FtpClient' => 
-            array (
-                0 => __DIR__ . '/..' . '/nicolab/php-ftp-client/src',
-            ),
         ),
     );
 
@@ -859,9 +850,6 @@ class ComposerStaticInityour_suffixed
         'Faker\\Provider\\zh_TW\\Text' => __DIR__ . '/..' . '/fakerphp/faker/src/Faker/Provider/zh_TW/Text.php',
         'Faker\\UniqueGenerator' => __DIR__ . '/..' . '/fakerphp/faker/src/Faker/UniqueGenerator.php',
         'Faker\\ValidGenerator' => __DIR__ . '/..' . '/fakerphp/faker/src/Faker/ValidGenerator.php',
-        'FtpClient\\FtpClient' => __DIR__ . '/..' . '/nicolab/php-ftp-client/src/FtpClient/FtpClient.php',
-        'FtpClient\\FtpException' => __DIR__ . '/..' . '/nicolab/php-ftp-client/src/FtpClient/FtpException.php',
-        'FtpClient\\FtpWrapper' => __DIR__ . '/..' . '/nicolab/php-ftp-client/src/FtpClient/FtpWrapper.php',
         'Josantonius\\Cookie\\Cookie' => __DIR__ . '/..' . '/josantonius/cookie/src/Cookie.php',
         'Josantonius\\Cookie\\Exceptions\\CookieException' => __DIR__ . '/..' . '/josantonius/cookie/src/Exceptions/CookieException.php',
         'Josantonius\\Cookie\\Facades\\Cookie' => __DIR__ . '/..' . '/josantonius/cookie/src/Facades/Cookie.php',
@@ -883,6 +871,50 @@ class ComposerStaticInityour_suffixed
         'Lablnet\\Adapter\\OpenSslEncryption' => __DIR__ . '/..' . '/lablnet/encryption/src/Adapter/OpenSslEncryption.php',
         'Lablnet\\Adapter\\SodiumEncryption' => __DIR__ . '/..' . '/lablnet/encryption/src/Adapter/SodiumEncryption.php',
         'Lablnet\\Encryption' => __DIR__ . '/..' . '/lablnet/encryption/src/Encryption.php',
+        'Latitude\\QueryBuilder\\Builder\\CriteriaBuilder' => __DIR__ . '/..' . '/latitude/latitude/src/Builder/CriteriaBuilder.php',
+        'Latitude\\QueryBuilder\\Builder\\LikeBuilder' => __DIR__ . '/..' . '/latitude/latitude/src/Builder/LikeBuilder.php',
+        'Latitude\\QueryBuilder\\CriteriaInterface' => __DIR__ . '/..' . '/latitude/latitude/src/CriteriaInterface.php',
+        'Latitude\\QueryBuilder\\EngineInterface' => __DIR__ . '/..' . '/latitude/latitude/src/EngineInterface.php',
+        'Latitude\\QueryBuilder\\Engine\\BasicEngine' => __DIR__ . '/..' . '/latitude/latitude/src/Engine/BasicEngine.php',
+        'Latitude\\QueryBuilder\\Engine\\CommonEngine' => __DIR__ . '/..' . '/latitude/latitude/src/Engine/CommonEngine.php',
+        'Latitude\\QueryBuilder\\Engine\\MySqlEngine' => __DIR__ . '/..' . '/latitude/latitude/src/Engine/MySqlEngine.php',
+        'Latitude\\QueryBuilder\\Engine\\PostgresEngine' => __DIR__ . '/..' . '/latitude/latitude/src/Engine/PostgresEngine.php',
+        'Latitude\\QueryBuilder\\Engine\\SqlServerEngine' => __DIR__ . '/..' . '/latitude/latitude/src/Engine/SqlServerEngine.php',
+        'Latitude\\QueryBuilder\\Engine\\SqliteEngine' => __DIR__ . '/..' . '/latitude/latitude/src/Engine/SqliteEngine.php',
+        'Latitude\\QueryBuilder\\ExpressionInterface' => __DIR__ . '/..' . '/latitude/latitude/src/ExpressionInterface.php',
+        'Latitude\\QueryBuilder\\Partial\\Criteria' => __DIR__ . '/..' . '/latitude/latitude/src/Partial/Criteria.php',
+        'Latitude\\QueryBuilder\\Partial\\Expression' => __DIR__ . '/..' . '/latitude/latitude/src/Partial/Expression.php',
+        'Latitude\\QueryBuilder\\Partial\\Identifier' => __DIR__ . '/..' . '/latitude/latitude/src/Partial/Identifier.php',
+        'Latitude\\QueryBuilder\\Partial\\IdentifierQualified' => __DIR__ . '/..' . '/latitude/latitude/src/Partial/IdentifierQualified.php',
+        'Latitude\\QueryBuilder\\Partial\\LikeBegins' => __DIR__ . '/..' . '/latitude/latitude/src/Partial/LikeBegins.php',
+        'Latitude\\QueryBuilder\\Partial\\LikeContains' => __DIR__ . '/..' . '/latitude/latitude/src/Partial/LikeContains.php',
+        'Latitude\\QueryBuilder\\Partial\\LikeEnds' => __DIR__ . '/..' . '/latitude/latitude/src/Partial/LikeEnds.php',
+        'Latitude\\QueryBuilder\\Partial\\Listing' => __DIR__ . '/..' . '/latitude/latitude/src/Partial/Listing.php',
+        'Latitude\\QueryBuilder\\Partial\\Literal' => __DIR__ . '/..' . '/latitude/latitude/src/Partial/Literal.php',
+        'Latitude\\QueryBuilder\\Partial\\Parameter' => __DIR__ . '/..' . '/latitude/latitude/src/Partial/Parameter.php',
+        'Latitude\\QueryBuilder\\Query' => __DIR__ . '/..' . '/latitude/latitude/src/Query.php',
+        'Latitude\\QueryBuilder\\QueryFactory' => __DIR__ . '/..' . '/latitude/latitude/src/QueryFactory.php',
+        'Latitude\\QueryBuilder\\QueryInterface' => __DIR__ . '/..' . '/latitude/latitude/src/QueryInterface.php',
+        'Latitude\\QueryBuilder\\Query\\AbstractQuery' => __DIR__ . '/..' . '/latitude/latitude/src/Query/AbstractQuery.php',
+        'Latitude\\QueryBuilder\\Query\\Capability\\CanUnion' => __DIR__ . '/..' . '/latitude/latitude/src/Query/Capability/CanUnion.php',
+        'Latitude\\QueryBuilder\\Query\\Capability\\HasFrom' => __DIR__ . '/..' . '/latitude/latitude/src/Query/Capability/HasFrom.php',
+        'Latitude\\QueryBuilder\\Query\\Capability\\HasLimit' => __DIR__ . '/..' . '/latitude/latitude/src/Query/Capability/HasLimit.php',
+        'Latitude\\QueryBuilder\\Query\\Capability\\HasOffset' => __DIR__ . '/..' . '/latitude/latitude/src/Query/Capability/HasOffset.php',
+        'Latitude\\QueryBuilder\\Query\\Capability\\HasOrderBy' => __DIR__ . '/..' . '/latitude/latitude/src/Query/Capability/HasOrderBy.php',
+        'Latitude\\QueryBuilder\\Query\\Capability\\HasReturning' => __DIR__ . '/..' . '/latitude/latitude/src/Query/Capability/HasReturning.php',
+        'Latitude\\QueryBuilder\\Query\\Capability\\HasWhere' => __DIR__ . '/..' . '/latitude/latitude/src/Query/Capability/HasWhere.php',
+        'Latitude\\QueryBuilder\\Query\\DeleteQuery' => __DIR__ . '/..' . '/latitude/latitude/src/Query/DeleteQuery.php',
+        'Latitude\\QueryBuilder\\Query\\InsertQuery' => __DIR__ . '/..' . '/latitude/latitude/src/Query/InsertQuery.php',
+        'Latitude\\QueryBuilder\\Query\\MySql\\InsertQuery' => __DIR__ . '/..' . '/latitude/latitude/src/Query/MySql/InsertQuery.php',
+        'Latitude\\QueryBuilder\\Query\\MySql\\SelectQuery' => __DIR__ . '/..' . '/latitude/latitude/src/Query/MySql/SelectQuery.php',
+        'Latitude\\QueryBuilder\\Query\\Postgres\\InsertQuery' => __DIR__ . '/..' . '/latitude/latitude/src/Query/Postgres/InsertQuery.php',
+        'Latitude\\QueryBuilder\\Query\\Postgres\\UpdateQuery' => __DIR__ . '/..' . '/latitude/latitude/src/Query/Postgres/UpdateQuery.php',
+        'Latitude\\QueryBuilder\\Query\\SelectQuery' => __DIR__ . '/..' . '/latitude/latitude/src/Query/SelectQuery.php',
+        'Latitude\\QueryBuilder\\Query\\SqlServer\\DeleteQuery' => __DIR__ . '/..' . '/latitude/latitude/src/Query/SqlServer/DeleteQuery.php',
+        'Latitude\\QueryBuilder\\Query\\SqlServer\\SelectQuery' => __DIR__ . '/..' . '/latitude/latitude/src/Query/SqlServer/SelectQuery.php',
+        'Latitude\\QueryBuilder\\Query\\UnionQuery' => __DIR__ . '/..' . '/latitude/latitude/src/Query/UnionQuery.php',
+        'Latitude\\QueryBuilder\\Query\\UpdateQuery' => __DIR__ . '/..' . '/latitude/latitude/src/Query/UpdateQuery.php',
+        'Latitude\\QueryBuilder\\StatementInterface' => __DIR__ . '/..' . '/latitude/latitude/src/StatementInterface.php',
         'League\\Uri\\BaseUri' => __DIR__ . '/..' . '/league/uri/BaseUri.php',
         'League\\Uri\\Contracts\\AuthorityInterface' => __DIR__ . '/..' . '/league/uri-interfaces/Contracts/AuthorityInterface.php',
         'League\\Uri\\Contracts\\DataPathInterface' => __DIR__ . '/..' . '/league/uri-interfaces/Contracts/DataPathInterface.php',
@@ -949,62 +981,6 @@ class ComposerStaticInityour_suffixed
         'Masterminds\\HTML5\\Serializer\\OutputRules' => __DIR__ . '/..' . '/masterminds/html5/src/HTML5/Serializer/OutputRules.php',
         'Masterminds\\HTML5\\Serializer\\RulesInterface' => __DIR__ . '/..' . '/masterminds/html5/src/HTML5/Serializer/RulesInterface.php',
         'Masterminds\\HTML5\\Serializer\\Traverser' => __DIR__ . '/..' . '/masterminds/html5/src/HTML5/Serializer/Traverser.php',
-        'NilPortugues\\Sql\\QueryBuilder\\Builder\\BuilderException' => __DIR__ . '/..' . '/nilportugues/sql-query-builder/src/Builder/BuilderException.php',
-        'NilPortugues\\Sql\\QueryBuilder\\Builder\\BuilderInterface' => __DIR__ . '/..' . '/nilportugues/sql-query-builder/src/Builder/BuilderInterface.php',
-        'NilPortugues\\Sql\\QueryBuilder\\Builder\\GenericBuilder' => __DIR__ . '/..' . '/nilportugues/sql-query-builder/src/Builder/GenericBuilder.php',
-        'NilPortugues\\Sql\\QueryBuilder\\Builder\\MySqlBuilder' => __DIR__ . '/..' . '/nilportugues/sql-query-builder/src/Builder/MySqlBuilder.php',
-        'NilPortugues\\Sql\\QueryBuilder\\Builder\\Syntax\\AbstractBaseWriter' => __DIR__ . '/..' . '/nilportugues/sql-query-builder/src/Builder/Syntax/AbstractBaseWriter.php',
-        'NilPortugues\\Sql\\QueryBuilder\\Builder\\Syntax\\AbstractSetWriter' => __DIR__ . '/..' . '/nilportugues/sql-query-builder/src/Builder/Syntax/AbstractSetWriter.php',
-        'NilPortugues\\Sql\\QueryBuilder\\Builder\\Syntax\\ColumnWriter' => __DIR__ . '/..' . '/nilportugues/sql-query-builder/src/Builder/Syntax/ColumnWriter.php',
-        'NilPortugues\\Sql\\QueryBuilder\\Builder\\Syntax\\DeleteWriter' => __DIR__ . '/..' . '/nilportugues/sql-query-builder/src/Builder/Syntax/DeleteWriter.php',
-        'NilPortugues\\Sql\\QueryBuilder\\Builder\\Syntax\\InsertWriter' => __DIR__ . '/..' . '/nilportugues/sql-query-builder/src/Builder/Syntax/InsertWriter.php',
-        'NilPortugues\\Sql\\QueryBuilder\\Builder\\Syntax\\IntersectWriter' => __DIR__ . '/..' . '/nilportugues/sql-query-builder/src/Builder/Syntax/IntersectWriter.php',
-        'NilPortugues\\Sql\\QueryBuilder\\Builder\\Syntax\\MinusWriter' => __DIR__ . '/..' . '/nilportugues/sql-query-builder/src/Builder/Syntax/MinusWriter.php',
-        'NilPortugues\\Sql\\QueryBuilder\\Builder\\Syntax\\PlaceholderWriter' => __DIR__ . '/..' . '/nilportugues/sql-query-builder/src/Builder/Syntax/PlaceholderWriter.php',
-        'NilPortugues\\Sql\\QueryBuilder\\Builder\\Syntax\\SelectWriter' => __DIR__ . '/..' . '/nilportugues/sql-query-builder/src/Builder/Syntax/SelectWriter.php',
-        'NilPortugues\\Sql\\QueryBuilder\\Builder\\Syntax\\UnionAllWriter' => __DIR__ . '/..' . '/nilportugues/sql-query-builder/src/Builder/Syntax/UnionAllWriter.php',
-        'NilPortugues\\Sql\\QueryBuilder\\Builder\\Syntax\\UnionWriter' => __DIR__ . '/..' . '/nilportugues/sql-query-builder/src/Builder/Syntax/UnionWriter.php',
-        'NilPortugues\\Sql\\QueryBuilder\\Builder\\Syntax\\UpdateWriter' => __DIR__ . '/..' . '/nilportugues/sql-query-builder/src/Builder/Syntax/UpdateWriter.php',
-        'NilPortugues\\Sql\\QueryBuilder\\Builder\\Syntax\\WhereWriter' => __DIR__ . '/..' . '/nilportugues/sql-query-builder/src/Builder/Syntax/WhereWriter.php',
-        'NilPortugues\\Sql\\QueryBuilder\\Builder\\Syntax\\WriterFactory' => __DIR__ . '/..' . '/nilportugues/sql-query-builder/src/Builder/Syntax/WriterFactory.php',
-        'NilPortugues\\Sql\\QueryBuilder\\Manipulation\\AbstractBaseQuery' => __DIR__ . '/..' . '/nilportugues/sql-query-builder/src/Manipulation/AbstractBaseQuery.php',
-        'NilPortugues\\Sql\\QueryBuilder\\Manipulation\\AbstractCreationalQuery' => __DIR__ . '/..' . '/nilportugues/sql-query-builder/src/Manipulation/AbstractCreationalQuery.php',
-        'NilPortugues\\Sql\\QueryBuilder\\Manipulation\\AbstractSetQuery' => __DIR__ . '/..' . '/nilportugues/sql-query-builder/src/Manipulation/AbstractSetQuery.php',
-        'NilPortugues\\Sql\\QueryBuilder\\Manipulation\\ColumnQuery' => __DIR__ . '/..' . '/nilportugues/sql-query-builder/src/Manipulation/ColumnQuery.php',
-        'NilPortugues\\Sql\\QueryBuilder\\Manipulation\\Delete' => __DIR__ . '/..' . '/nilportugues/sql-query-builder/src/Manipulation/Delete.php',
-        'NilPortugues\\Sql\\QueryBuilder\\Manipulation\\Insert' => __DIR__ . '/..' . '/nilportugues/sql-query-builder/src/Manipulation/Insert.php',
-        'NilPortugues\\Sql\\QueryBuilder\\Manipulation\\Intersect' => __DIR__ . '/..' . '/nilportugues/sql-query-builder/src/Manipulation/Intersect.php',
-        'NilPortugues\\Sql\\QueryBuilder\\Manipulation\\JoinQuery' => __DIR__ . '/..' . '/nilportugues/sql-query-builder/src/Manipulation/JoinQuery.php',
-        'NilPortugues\\Sql\\QueryBuilder\\Manipulation\\Minus' => __DIR__ . '/..' . '/nilportugues/sql-query-builder/src/Manipulation/Minus.php',
-        'NilPortugues\\Sql\\QueryBuilder\\Manipulation\\QueryException' => __DIR__ . '/..' . '/nilportugues/sql-query-builder/src/Manipulation/QueryException.php',
-        'NilPortugues\\Sql\\QueryBuilder\\Manipulation\\QueryFactory' => __DIR__ . '/..' . '/nilportugues/sql-query-builder/src/Manipulation/QueryFactory.php',
-        'NilPortugues\\Sql\\QueryBuilder\\Manipulation\\QueryInterface' => __DIR__ . '/..' . '/nilportugues/sql-query-builder/src/Manipulation/QueryInterface.php',
-        'NilPortugues\\Sql\\QueryBuilder\\Manipulation\\Select' => __DIR__ . '/..' . '/nilportugues/sql-query-builder/src/Manipulation/Select.php',
-        'NilPortugues\\Sql\\QueryBuilder\\Manipulation\\Union' => __DIR__ . '/..' . '/nilportugues/sql-query-builder/src/Manipulation/Union.php',
-        'NilPortugues\\Sql\\QueryBuilder\\Manipulation\\UnionAll' => __DIR__ . '/..' . '/nilportugues/sql-query-builder/src/Manipulation/UnionAll.php',
-        'NilPortugues\\Sql\\QueryBuilder\\Manipulation\\Update' => __DIR__ . '/..' . '/nilportugues/sql-query-builder/src/Manipulation/Update.php',
-        'NilPortugues\\Sql\\QueryBuilder\\Syntax\\Column' => __DIR__ . '/..' . '/nilportugues/sql-query-builder/src/Syntax/Column.php',
-        'NilPortugues\\Sql\\QueryBuilder\\Syntax\\OrderBy' => __DIR__ . '/..' . '/nilportugues/sql-query-builder/src/Syntax/OrderBy.php',
-        'NilPortugues\\Sql\\QueryBuilder\\Syntax\\QueryPartInterface' => __DIR__ . '/..' . '/nilportugues/sql-query-builder/src/Syntax/QueryPartInterface.php',
-        'NilPortugues\\Sql\\QueryBuilder\\Syntax\\SyntaxFactory' => __DIR__ . '/..' . '/nilportugues/sql-query-builder/src/Syntax/SyntaxFactory.php',
-        'NilPortugues\\Sql\\QueryBuilder\\Syntax\\Table' => __DIR__ . '/..' . '/nilportugues/sql-query-builder/src/Syntax/Table.php',
-        'NilPortugues\\Sql\\QueryBuilder\\Syntax\\Where' => __DIR__ . '/..' . '/nilportugues/sql-query-builder/src/Syntax/Where.php',
-        'NilPortugues\\Sql\\QueryFormatter\\Formatter' => __DIR__ . '/..' . '/nilportugues/sql-query-formatter/src/Formatter.php',
-        'NilPortugues\\Sql\\QueryFormatter\\Helper\\Comment' => __DIR__ . '/..' . '/nilportugues/sql-query-formatter/src/Helper/Comment.php',
-        'NilPortugues\\Sql\\QueryFormatter\\Helper\\Indent' => __DIR__ . '/..' . '/nilportugues/sql-query-formatter/src/Helper/Indent.php',
-        'NilPortugues\\Sql\\QueryFormatter\\Helper\\NewLine' => __DIR__ . '/..' . '/nilportugues/sql-query-formatter/src/Helper/NewLine.php',
-        'NilPortugues\\Sql\\QueryFormatter\\Helper\\Parentheses' => __DIR__ . '/..' . '/nilportugues/sql-query-formatter/src/Helper/Parentheses.php',
-        'NilPortugues\\Sql\\QueryFormatter\\Helper\\Token' => __DIR__ . '/..' . '/nilportugues/sql-query-formatter/src/Helper/Token.php',
-        'NilPortugues\\Sql\\QueryFormatter\\Helper\\WhiteSpace' => __DIR__ . '/..' . '/nilportugues/sql-query-formatter/src/Helper/WhiteSpace.php',
-        'NilPortugues\\Sql\\QueryFormatter\\Tokenizer\\Parser\\Boundary' => __DIR__ . '/..' . '/nilportugues/sql-query-formatter/src/Tokenizer/Parser/Boundary.php',
-        'NilPortugues\\Sql\\QueryFormatter\\Tokenizer\\Parser\\Comment' => __DIR__ . '/..' . '/nilportugues/sql-query-formatter/src/Tokenizer/Parser/Comment.php',
-        'NilPortugues\\Sql\\QueryFormatter\\Tokenizer\\Parser\\LiteralString' => __DIR__ . '/..' . '/nilportugues/sql-query-formatter/src/Tokenizer/Parser/LiteralString.php',
-        'NilPortugues\\Sql\\QueryFormatter\\Tokenizer\\Parser\\Numeral' => __DIR__ . '/..' . '/nilportugues/sql-query-formatter/src/Tokenizer/Parser/Numeral.php',
-        'NilPortugues\\Sql\\QueryFormatter\\Tokenizer\\Parser\\Quoted' => __DIR__ . '/..' . '/nilportugues/sql-query-formatter/src/Tokenizer/Parser/Quoted.php',
-        'NilPortugues\\Sql\\QueryFormatter\\Tokenizer\\Parser\\Reserved' => __DIR__ . '/..' . '/nilportugues/sql-query-formatter/src/Tokenizer/Parser/Reserved.php',
-        'NilPortugues\\Sql\\QueryFormatter\\Tokenizer\\Parser\\UserDefined' => __DIR__ . '/..' . '/nilportugues/sql-query-formatter/src/Tokenizer/Parser/UserDefined.php',
-        'NilPortugues\\Sql\\QueryFormatter\\Tokenizer\\Parser\\WhiteSpace' => __DIR__ . '/..' . '/nilportugues/sql-query-formatter/src/Tokenizer/Parser/WhiteSpace.php',
-        'NilPortugues\\Sql\\QueryFormatter\\Tokenizer\\Tokenizer' => __DIR__ . '/..' . '/nilportugues/sql-query-formatter/src/Tokenizer/Tokenizer.php',
         'Normalizer' => __DIR__ . '/..' . '/symfony/polyfill-intl-normalizer/Resources/stubs/Normalizer.php',
         'Optimus\\Onion\\LayerInterface' => __DIR__ . '/..' . '/optimus/onion/src/LayerInterface.php',
         'Optimus\\Onion\\Onion' => __DIR__ . '/..' . '/optimus/onion/src/Onion.php',
@@ -1697,6 +1673,67 @@ class ComposerStaticInityour_suffixed
         'Psr\\Http\\Message\\UploadedFileInterface' => __DIR__ . '/..' . '/psr/http-message/src/UploadedFileInterface.php',
         'Psr\\Http\\Message\\UriFactoryInterface' => __DIR__ . '/..' . '/psr/http-factory/src/UriFactoryInterface.php',
         'Psr\\Http\\Message\\UriInterface' => __DIR__ . '/..' . '/psr/http-message/src/UriInterface.php',
+        'Rakit\\Validation\\Attribute' => __DIR__ . '/..' . '/rakit/validation/src/Attribute.php',
+        'Rakit\\Validation\\ErrorBag' => __DIR__ . '/..' . '/rakit/validation/src/ErrorBag.php',
+        'Rakit\\Validation\\Helper' => __DIR__ . '/..' . '/rakit/validation/src/Helper.php',
+        'Rakit\\Validation\\MimeTypeGuesser' => __DIR__ . '/..' . '/rakit/validation/src/MimeTypeGuesser.php',
+        'Rakit\\Validation\\MissingRequiredParameterException' => __DIR__ . '/..' . '/rakit/validation/src/MissingRequiredParameterException.php',
+        'Rakit\\Validation\\Rule' => __DIR__ . '/..' . '/rakit/validation/src/Rule.php',
+        'Rakit\\Validation\\RuleNotFoundException' => __DIR__ . '/..' . '/rakit/validation/src/RuleNotFoundException.php',
+        'Rakit\\Validation\\RuleQuashException' => __DIR__ . '/..' . '/rakit/validation/src/RuleQuashException.php',
+        'Rakit\\Validation\\Rules\\Accepted' => __DIR__ . '/..' . '/rakit/validation/src/Rules/Accepted.php',
+        'Rakit\\Validation\\Rules\\After' => __DIR__ . '/..' . '/rakit/validation/src/Rules/After.php',
+        'Rakit\\Validation\\Rules\\Alpha' => __DIR__ . '/..' . '/rakit/validation/src/Rules/Alpha.php',
+        'Rakit\\Validation\\Rules\\AlphaDash' => __DIR__ . '/..' . '/rakit/validation/src/Rules/AlphaDash.php',
+        'Rakit\\Validation\\Rules\\AlphaNum' => __DIR__ . '/..' . '/rakit/validation/src/Rules/AlphaNum.php',
+        'Rakit\\Validation\\Rules\\AlphaSpaces' => __DIR__ . '/..' . '/rakit/validation/src/Rules/AlphaSpaces.php',
+        'Rakit\\Validation\\Rules\\Before' => __DIR__ . '/..' . '/rakit/validation/src/Rules/Before.php',
+        'Rakit\\Validation\\Rules\\Between' => __DIR__ . '/..' . '/rakit/validation/src/Rules/Between.php',
+        'Rakit\\Validation\\Rules\\Boolean' => __DIR__ . '/..' . '/rakit/validation/src/Rules/Boolean.php',
+        'Rakit\\Validation\\Rules\\Callback' => __DIR__ . '/..' . '/rakit/validation/src/Rules/Callback.php',
+        'Rakit\\Validation\\Rules\\Date' => __DIR__ . '/..' . '/rakit/validation/src/Rules/Date.php',
+        'Rakit\\Validation\\Rules\\Defaults' => __DIR__ . '/..' . '/rakit/validation/src/Rules/Defaults.php',
+        'Rakit\\Validation\\Rules\\Different' => __DIR__ . '/..' . '/rakit/validation/src/Rules/Different.php',
+        'Rakit\\Validation\\Rules\\Digits' => __DIR__ . '/..' . '/rakit/validation/src/Rules/Digits.php',
+        'Rakit\\Validation\\Rules\\DigitsBetween' => __DIR__ . '/..' . '/rakit/validation/src/Rules/DigitsBetween.php',
+        'Rakit\\Validation\\Rules\\Email' => __DIR__ . '/..' . '/rakit/validation/src/Rules/Email.php',
+        'Rakit\\Validation\\Rules\\Extension' => __DIR__ . '/..' . '/rakit/validation/src/Rules/Extension.php',
+        'Rakit\\Validation\\Rules\\In' => __DIR__ . '/..' . '/rakit/validation/src/Rules/In.php',
+        'Rakit\\Validation\\Rules\\Integer' => __DIR__ . '/..' . '/rakit/validation/src/Rules/Integer.php',
+        'Rakit\\Validation\\Rules\\Interfaces\\BeforeValidate' => __DIR__ . '/..' . '/rakit/validation/src/Rules/Interfaces/BeforeValidate.php',
+        'Rakit\\Validation\\Rules\\Interfaces\\ModifyValue' => __DIR__ . '/..' . '/rakit/validation/src/Rules/Interfaces/ModifyValue.php',
+        'Rakit\\Validation\\Rules\\Ip' => __DIR__ . '/..' . '/rakit/validation/src/Rules/Ip.php',
+        'Rakit\\Validation\\Rules\\Ipv4' => __DIR__ . '/..' . '/rakit/validation/src/Rules/Ipv4.php',
+        'Rakit\\Validation\\Rules\\Ipv6' => __DIR__ . '/..' . '/rakit/validation/src/Rules/Ipv6.php',
+        'Rakit\\Validation\\Rules\\Json' => __DIR__ . '/..' . '/rakit/validation/src/Rules/Json.php',
+        'Rakit\\Validation\\Rules\\Lowercase' => __DIR__ . '/..' . '/rakit/validation/src/Rules/Lowercase.php',
+        'Rakit\\Validation\\Rules\\Max' => __DIR__ . '/..' . '/rakit/validation/src/Rules/Max.php',
+        'Rakit\\Validation\\Rules\\Mimes' => __DIR__ . '/..' . '/rakit/validation/src/Rules/Mimes.php',
+        'Rakit\\Validation\\Rules\\Min' => __DIR__ . '/..' . '/rakit/validation/src/Rules/Min.php',
+        'Rakit\\Validation\\Rules\\NotIn' => __DIR__ . '/..' . '/rakit/validation/src/Rules/NotIn.php',
+        'Rakit\\Validation\\Rules\\Nullable' => __DIR__ . '/..' . '/rakit/validation/src/Rules/Nullable.php',
+        'Rakit\\Validation\\Rules\\Numeric' => __DIR__ . '/..' . '/rakit/validation/src/Rules/Numeric.php',
+        'Rakit\\Validation\\Rules\\Present' => __DIR__ . '/..' . '/rakit/validation/src/Rules/Present.php',
+        'Rakit\\Validation\\Rules\\Regex' => __DIR__ . '/..' . '/rakit/validation/src/Rules/Regex.php',
+        'Rakit\\Validation\\Rules\\Required' => __DIR__ . '/..' . '/rakit/validation/src/Rules/Required.php',
+        'Rakit\\Validation\\Rules\\RequiredIf' => __DIR__ . '/..' . '/rakit/validation/src/Rules/RequiredIf.php',
+        'Rakit\\Validation\\Rules\\RequiredUnless' => __DIR__ . '/..' . '/rakit/validation/src/Rules/RequiredUnless.php',
+        'Rakit\\Validation\\Rules\\RequiredWith' => __DIR__ . '/..' . '/rakit/validation/src/Rules/RequiredWith.php',
+        'Rakit\\Validation\\Rules\\RequiredWithAll' => __DIR__ . '/..' . '/rakit/validation/src/Rules/RequiredWithAll.php',
+        'Rakit\\Validation\\Rules\\RequiredWithout' => __DIR__ . '/..' . '/rakit/validation/src/Rules/RequiredWithout.php',
+        'Rakit\\Validation\\Rules\\RequiredWithoutAll' => __DIR__ . '/..' . '/rakit/validation/src/Rules/RequiredWithoutAll.php',
+        'Rakit\\Validation\\Rules\\Same' => __DIR__ . '/..' . '/rakit/validation/src/Rules/Same.php',
+        'Rakit\\Validation\\Rules\\Traits\\DateUtilsTrait' => __DIR__ . '/..' . '/rakit/validation/src/Rules/Traits/DateUtilsTrait.php',
+        'Rakit\\Validation\\Rules\\Traits\\FileTrait' => __DIR__ . '/..' . '/rakit/validation/src/Rules/Traits/FileTrait.php',
+        'Rakit\\Validation\\Rules\\Traits\\SizeTrait' => __DIR__ . '/..' . '/rakit/validation/src/Rules/Traits/SizeTrait.php',
+        'Rakit\\Validation\\Rules\\TypeArray' => __DIR__ . '/..' . '/rakit/validation/src/Rules/TypeArray.php',
+        'Rakit\\Validation\\Rules\\UploadedFile' => __DIR__ . '/..' . '/rakit/validation/src/Rules/UploadedFile.php',
+        'Rakit\\Validation\\Rules\\Uppercase' => __DIR__ . '/..' . '/rakit/validation/src/Rules/Uppercase.php',
+        'Rakit\\Validation\\Rules\\Url' => __DIR__ . '/..' . '/rakit/validation/src/Rules/Url.php',
+        'Rakit\\Validation\\Traits\\MessagesTrait' => __DIR__ . '/..' . '/rakit/validation/src/Traits/MessagesTrait.php',
+        'Rakit\\Validation\\Traits\\TranslationsTrait' => __DIR__ . '/..' . '/rakit/validation/src/Traits/TranslationsTrait.php',
+        'Rakit\\Validation\\Validation' => __DIR__ . '/..' . '/rakit/validation/src/Validation.php',
+        'Rakit\\Validation\\Validator' => __DIR__ . '/..' . '/rakit/validation/src/Validator.php',
         'SebastianBergmann\\CliParser\\AmbiguousOptionException' => __DIR__ . '/..' . '/sebastian/cli-parser/src/exceptions/AmbiguousOptionException.php',
         'SebastianBergmann\\CliParser\\Exception' => __DIR__ . '/..' . '/sebastian/cli-parser/src/exceptions/Exception.php',
         'SebastianBergmann\\CliParser\\OptionDoesNotAllowArgumentException' => __DIR__ . '/..' . '/sebastian/cli-parser/src/exceptions/OptionDoesNotAllowArgumentException.php',
@@ -2118,7 +2155,6 @@ class ComposerStaticInityour_suffixed
         return \Closure::bind(function () use ($loader) {
             $loader->prefixLengthsPsr4 = ComposerStaticInityour_suffixed::$prefixLengthsPsr4;
             $loader->prefixDirsPsr4 = ComposerStaticInityour_suffixed::$prefixDirsPsr4;
-            $loader->prefixesPsr0 = ComposerStaticInityour_suffixed::$prefixesPsr0;
             $loader->classMap = ComposerStaticInityour_suffixed::$classMap;
 
         }, null, ClassLoader::class);

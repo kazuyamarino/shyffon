@@ -238,7 +238,6 @@ return [
 		'System\Vendor\Curl' => Curl\Curl::class,
 		'System\Vendor\Faker' => Faker\Factory::class,
 		'System\Vendor\Carbon' => Carbon\Carbon::class,
-		'System\Vendor\Ftp' => FtpClient\FtpClient::class,
 		'System\Vendor\Almana' => Lablnet\Encryption::class,
 		'System\Libraries\Cookie' => Josantonius\Cookie\Cookie::class,
 		'System\Libraries\Facades\Cookie' => Josantonius\Cookie\Facades\Cookie::class,
@@ -252,7 +251,7 @@ return [
 	| User Defined Routes
 	|--------------------------------------------------------------------------
 	|
-	| This array is for registering route classes according to the user's wishes. 
+	| This array is for registering route classes according to the user's wishes.
 	| Make sure the route class is already in the 'System/Routes' directory.
 	|
 	*/

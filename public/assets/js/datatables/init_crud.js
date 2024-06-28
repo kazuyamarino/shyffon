@@ -17,7 +17,7 @@ $(document).ready(function () {
 			{ data: "user_status" },
 			{ data: "create_date" },
 			{ data: "update_date" },
-			{ data: "additional_date" },
+			{ data: "update_date" },
 			{ data: "id" },
 		],
 		columnDefs: [
@@ -37,7 +37,7 @@ $(document).ready(function () {
 				}
 			},
 			{
-				targets: ["user_code", "user_name", "create_date", "update_date", "additional_date"],
+				targets: ["user_code", "user_name", "create_date", "update_date", "delete_date"],
 				render: function (data, type, full, meta) {
 					return `<div class="text-center">${data}</div>`;
 				}

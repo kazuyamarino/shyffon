@@ -92,7 +92,7 @@
 							<th class="user_status">User Status</th>
 							<th class="create_date">Create Date</th>
 							<th class="update_date">Update Date</th>
-							<th class="additional_date">Additional Date</th>
+							<th class="delete_date">Delete Date</th>
 							<th class="action">Action</th>
 						</tr>
 					</thead>

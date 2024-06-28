@@ -69,13 +69,13 @@ class Controller_Crud extends Load
 		} else {
 			// create array parameters from variables
 			$param = [
-				":user_code"       => $user_code,
-				":user_name"       => $user_name,
-				":user_password"   => $user_password,
-				":user_status"     => $user_status,
-				":create_date"     => $date,
-				":update_date"     => $date,
-				":additional_date" => $date
+				":user_code"     => $user_code,
+				":user_name"     => $user_name,
+				":user_password" => $user_password,
+				":user_status"   => $user_status,
+				":create_date"   => $date,
+				":update_date"   => $date,
+				":delete_date"   => $date
 			];
 
 			// call the method insert_data

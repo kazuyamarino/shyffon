@@ -54,7 +54,7 @@ class Model_Crud extends DB
 			user_status,
 			create_date,
 			update_date,
-			additional_date )
+			delete_date )
 		VALUES(
 			:user_code,
 			:user_name,
@@ -62,7 +62,7 @@ class Model_Crud extends DB
 			:user_status,
 			:create_date,
 			:update_date,
-			:additional_date )";
+			:delete_date )";
 		DB::connect()->query($q_insert_user)->vars($param)->bind()->exec();
 	}
 
@@ -84,13 +84,13 @@ class Model_Crud extends DB
 	{
 		// query for data updates without a password
 		$query = "UPDATE crud_table SET
-			user_name       = :user_name,
-			user_password   = user_password,
-			user_status     = :user_status,
-			create_date     = create_date,
-			update_date     = :update_date,
-			additional_date = additional_date
-		WHERE id              = :id";
+			user_name     = :user_name,
+			user_password = user_password,
+			user_status   = :user_status,
+			create_date   = create_date,
+			update_date   = :update_date,
+			delete_date   = delete_date
+		WHERE id            = :id";
 		DB::connect()->query($query)->vars($param)->bind()->exec();
 	}
 
@@ -98,13 +98,13 @@ class Model_Crud extends DB
 	{
 		// query for data updates with a password
 		$query = "UPDATE crud_table SET
-			user_name       = :user_name,
-			user_password   = :user_password,
-			user_status     = :user_status,
-			create_date     = create_date,
-			update_date     = :update_date,
-			additional_date = additional_date
-		WHERE id              = :id";
+			user_name     = :user_name,
+			user_password = :user_password,
+			user_status   = :user_status,
+			create_date   = create_date,
+			update_date   = :update_date,
+			delete_date   = delete_date
+		WHERE id            = :id";
 		DB::connect()->query($query)->vars($param)->bind()->exec();
 	}
 

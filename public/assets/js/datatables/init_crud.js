@@ -46,7 +46,7 @@ $(document).ready(function () {
 				targets: ["action"],
 				render: function (data, type, full, meta) {
 					if (data) {
-						return `<div class="action-icon">
+						return `<div class="text-center action-icon">
 							<a id="fetch-btn" href="${base_url("crud/fetch/" + data)}"><i class="far fa-edit"></i></a>
 							<a id="delete-btn" data-open="delete-modal" data-url="${base_url("crud/delete/" + data)}"><i class="far fa-trash-alt"></i></a>
 						</div>`;

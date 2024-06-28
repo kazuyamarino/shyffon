@@ -19,17 +19,14 @@ class crud_table_05062024_163642
 	 */
 	public function up()
 	{
-		Mig::connect()->create_table('crud_table', function () {
-			return Mig::cols([
-				Mig::bigint('id', 20)->auto_increment(),
-				Mig::varchar('user_name', 20)->not_null(),
-				Mig::varchar('user_password')->not_null(),
-				Mig::bigint('user_code')->not_null(),
-				Mig::varchar('user_status', 2)->null(),
-				Mig::primary('id')
-			]);
-		});
-		Mig::connect()->index('crud_table', 'BTREE', 'id');
+		Mig::connect()->create_table('crud_table', [
+			Mig::bigint('id', 20)->auto_increment(),
+			Mig::varchar('user_name', 20)->not_null(),
+			Mig::varchar('user_password')->not_null(),
+			Mig::bigint('user_code')->not_null(),
+			Mig::varchar('user_status', 2)->null(),
+			Mig::primary('id')
+		])->index('crud_table', 'BTREE', 'id');
 	}
 
 	/**

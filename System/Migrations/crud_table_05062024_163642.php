@@ -26,7 +26,7 @@ class crud_table_05062024_163642
 			Mig::bigint('user_code')->not_null(),
 			Mig::varchar('user_status', 2)->null(),
 			Mig::primary('id')
-		])->index('crud_table', 'BTREE', 'id');
+		])->index('BTREE', 'id');
 	}
 
 	/**

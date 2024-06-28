@@ -36,6 +36,6 @@ class crud_table_05062024_163642
 	 */
 	public function down()
 	{
-		Mig::connect()->drop_exist_table('crud_table');
+		Mig::connect()->drop_exist_table(['crud_table']);
 	}
 }

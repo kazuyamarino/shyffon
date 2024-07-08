@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "dd73080d85b0384648aeafefe4ce0a8b",
+    "content-hash": "4f965fd0356d2929bc1ab2e986dbdb65",
     "packages": [
         {
             "name": "carbonphp/carbon-doctrine-types",
@@ -375,58 +375,6 @@
                 "source": "https://github.com/Lablnet/PHP-Encryption/tree/master"
             },
             "time": "2019-02-06T07:16:23+00:00"
-        },
-        {
-            "name": "latitude/latitude",
-            "version": "4.2.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/shadowhand/latitude.git",
-                "reference": "dc1182ec88cfb532b049af83d44863d373897587"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/shadowhand/latitude/zipball/dc1182ec88cfb532b049af83d44863d373897587",
-                "reference": "dc1182ec88cfb532b049af83d44863d373897587",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=7.2"
-            },
-            "require-dev": {
-                "eloquent/liberator": "^2.0",
-                "eloquent/phpstan-phony": "^0.5.0",
-                "phpstan/extension-installer": "^1.0",
-                "phpstan/phpstan": "^0.11.12",
-                "phpstan/phpstan-phpunit": "^0.11.2",
-                "phpunit/phpunit": "^8.3"
-            },
-            "type": "library",
-            "autoload": {
-                "files": [
-                    "src/functions.php"
-                ],
-                "psr-4": {
-                    "Latitude\\QueryBuilder\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Woody Gilk",
-                    "email": "woody.gilk@gmail.com",
-                    "homepage": "https://github.com/shadowhand"
-                }
-            ],
-            "description": "A SQL query builder with zero dependencies",
-            "support": {
-                "issues": "https://github.com/shadowhand/latitude/issues",
-                "source": "https://github.com/shadowhand/latitude/tree/4.2.0"
-            },
-            "time": "2020-06-24T15:01:19+00:00"
         },
         {
             "name": "league/uri",
@@ -2322,16 +2270,16 @@
         },
         {
             "name": "nikic/php-parser",
-            "version": "v5.0.2",
+            "version": "v5.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nikic/PHP-Parser.git",
-                "reference": "139676794dc1e9231bf7bcd123cfc0c99182cb13"
+                "reference": "683130c2ff8c2739f4822ff7ac5c873ec529abd1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nikic/PHP-Parser/zipball/139676794dc1e9231bf7bcd123cfc0c99182cb13",
-                "reference": "139676794dc1e9231bf7bcd123cfc0c99182cb13",
+                "url": "https://api.github.com/repos/nikic/PHP-Parser/zipball/683130c2ff8c2739f4822ff7ac5c873ec529abd1",
+                "reference": "683130c2ff8c2739f4822ff7ac5c873ec529abd1",
                 "shasum": ""
             },
             "require": {
@@ -2342,7 +2290,7 @@
             },
             "require-dev": {
                 "ircmaxell/php-yacc": "^0.0.7",
-                "phpunit/phpunit": "^7.0 || ^8.0 || ^9.0"
+                "phpunit/phpunit": "^9.0"
             },
             "bin": [
                 "bin/php-parse"
@@ -2374,9 +2322,9 @@
             ],
             "support": {
                 "issues": "https://github.com/nikic/PHP-Parser/issues",
-                "source": "https://github.com/nikic/PHP-Parser/tree/v5.0.2"
+                "source": "https://github.com/nikic/PHP-Parser/tree/v5.1.0"
             },
-            "time": "2024-03-05T20:51:40+00:00"
+            "time": "2024-07-01T20:03:41+00:00"
         },
         {
             "name": "phar-io/manifest",

@@ -12,7 +12,7 @@ class Model_Crud extends DB
 		// query to display the data table in json form
 		$query = "SELECT * FROM crud_table";
 		$data = DB::connect()->query($query)->style(FETCH_ASSOC)->fetch_all();
-		$json_data = json_fetch([
+		$json_data = fetch_json([
 			"data" => $data
 		]);
 
